@@ -1,0 +1,213 @@
+/* =============================================
+   NY ITA RP — FAZIONI
+   ============================================= */
+
+.fazioni-section {
+  background: linear-gradient(180deg, var(--blue-darkest) 0%, var(--blue-dark) 50%, var(--blue-darkest) 100%);
+}
+
+/* ===== TABS ===== */
+.factions-tabs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  padding: 12px 28px;
+  background: transparent;
+  color: var(--grey-mid);
+  border: 1px solid var(--grey-dark);
+  cursor: pointer;
+  transition: all var(--transition);
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+}
+
+.tab-btn:hover {
+  color: var(--white);
+  border-color: var(--blue-accent);
+  background: rgba(21, 101, 192, 0.1);
+}
+
+.tab-btn.active {
+  background: var(--blue-accent);
+  color: var(--white);
+  border-color: var(--blue-accent);
+}
+
+/* ===== TAB CONTENT ===== */
+.tab-content {
+  display: none;
+  animation: fadeInUp 0.4s ease both;
+}
+
+.tab-content.active { display: block; }
+
+/* ===== FACTIONS GRID ===== */
+.factions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* ===== FACTION CARD ===== */
+.faction-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition);
+}
+
+.faction-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(30,136,229,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.faction-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--blue-accent);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(30,136,229,0.2);
+}
+
+.faction-card.dark {
+  background: rgba(10, 10, 20, 0.8);
+  border-color: rgba(100, 100, 120, 0.3);
+}
+
+.faction-card.dark:hover {
+  border-color: rgba(231, 76, 60, 0.5);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(231,76,60,0.2);
+}
+
+/* Stripe */
+.faction-stripe {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+
+/* Header */
+.faction-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+
+.faction-badge {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: var(--white);
+  padding: 4px 12px;
+}
+
+.faction-status {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+
+.faction-status.online { color: var(--success); }
+.faction-status.warning { color: var(--warning); animation: blink 2s infinite; }
+
+/* Content */
+.faction-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 12px;
+  letter-spacing: 0.03em;
+}
+
+.faction-desc {
+  font-size: 0.9rem;
+  color: var(--grey-light);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.faction-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px;
+  background: rgba(0,0,0,0.2);
+  border-left: 2px solid var(--blue-accent);
+  margin-bottom: 20px;
+}
+
+.faction-stats span {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--grey-light);
+  letter-spacing: 0.05em;
+}
+
+/* Faction Button */
+.faction-btn {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  padding: 10px 24px;
+  background: var(--blue-accent);
+  color: var(--white);
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+  transition: all var(--transition);
+}
+
+.faction-btn:hover {
+  background: var(--blue-bright);
+  transform: translateX(4px);
+}
+
+.faction-btn.danger {
+  background: var(--danger);
+}
+
+.faction-btn.danger:hover {
+  background: #c0392b;
+}
+
+/* Crime Warning */
+.crime-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 32px;
+  padding: 20px 24px;
+  background: rgba(231, 76, 60, 0.08);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  border-left: 3px solid var(--danger);
+}
+
+.crime-warning span {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.crime-warning p {
+  font-size: 0.88rem;
+  color: var(--grey-light);
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .factions-grid {
+    grid-template-columns: 1fr;
+  }
+}

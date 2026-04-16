@@ -1,0 +1,186 @@
+/* =============================================
+   NY ITA RP — SHOP
+   ============================================= */
+
+.shop-section {
+  background: linear-gradient(180deg, var(--blue-darkest) 0%, var(--blue-dark) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.shop-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 400px;
+  background: radial-gradient(ellipse, rgba(21, 101, 192, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ===== SHOP GRID ===== */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+  align-items: stretch;
+}
+
+/* ===== SHOP CARD ===== */
+.shop-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  padding: 32px 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition);
+  overflow: hidden;
+}
+
+.shop-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue-accent), var(--blue-glow));
+  transform: scaleX(0.4);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+
+.shop-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--blue-accent);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 30px var(--accent-glow);
+}
+
+.shop-card:hover::before {
+  transform: scaleX(1);
+}
+
+.shop-card.featured {
+  border-color: var(--blue-accent);
+  box-shadow: 0 0 40px rgba(21, 101, 192, 0.2);
+}
+
+.shop-card.featured::before {
+  transform: scaleX(1);
+}
+
+.shop-card.elite {
+  border-color: rgba(144, 202, 249, 0.4);
+  background: rgba(7, 26, 53, 0.9);
+}
+
+.shop-card.elite::before {
+  background: linear-gradient(90deg, var(--blue-light), var(--blue-glow), var(--blue-light));
+  transform: scaleX(1);
+}
+
+/* Badge */
+.shop-badge {
+  position: absolute;
+  top: 16px; right: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  padding: 4px 10px;
+  background: var(--blue-accent);
+  color: var(--white);
+}
+
+.shop-badge.gold {
+  background: linear-gradient(135deg, #c9a227, #e2c24a);
+  color: #1a1000;
+}
+
+.shop-badge.elite-badge {
+  background: linear-gradient(135deg, #2c3e6e, #4a6fa5);
+  border: 1px solid var(--blue-light);
+  color: var(--blue-light);
+}
+
+/* Icon */
+.shop-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* Name */
+.shop-name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+/* Price */
+.shop-price {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--blue-glow);
+  margin-bottom: 24px;
+  line-height: 1;
+}
+
+.shop-price span {
+  font-size: 0.9rem;
+  color: var(--grey-mid);
+  font-family: var(--font-body);
+  font-weight: 300;
+}
+
+/* Perks List */
+.shop-perks {
+  list-style: none;
+  flex: 1;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shop-perks li {
+  font-size: 0.85rem;
+  color: var(--grey-light);
+  font-family: var(--font-mono);
+  letter-spacing: 0.03em;
+  padding-left: 4px;
+}
+
+.shop-perks li:has(❌) {
+  opacity: 0.4;
+}
+
+/* CTA */
+.shop-card .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Disclaimer */
+.shop-disclaimer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--grey-mid);
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  padding: 16px;
+  border: 1px solid rgba(30,136,229,0.1);
+  background: rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .shop-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .shop-grid { grid-template-columns: 1fr; }
+}

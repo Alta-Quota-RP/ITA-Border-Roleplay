@@ -1,0 +1,247 @@
+/* =============================================
+   NY ITA RP — NAVBAR
+   ============================================= */
+
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 0 32px;
+  height: 70px;
+  background: rgba(5, 13, 26, 0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+  border-bottom-color: var(--blue-accent);
+}
+
+/* Brand */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.brand-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  background: var(--blue-accent);
+  color: var(--white);
+  padding: 3px 8px;
+  letter-spacing: 0.1em;
+}
+
+.brand-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  color: var(--white);
+}
+
+.brand-title.large {
+  font-size: 2.5rem;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-links li a {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: var(--grey-light);
+  padding: 8px 14px;
+  transition: all var(--transition);
+  position: relative;
+  text-transform: uppercase;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%; right: 50%;
+  height: 2px;
+  background: var(--blue-glow);
+  transition: all var(--transition);
+}
+
+.nav-links li a:hover {
+  color: var(--white);
+}
+
+.nav-links li a:hover::after {
+  left: 14px; right: 14px;
+}
+
+/* Nav Stats */
+.nav-stats {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(21, 101, 192, 0.15);
+  border: 1px solid var(--glass-border);
+  padding: 6px 14px;
+  min-width: 80px;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  color: var(--blue-glow);
+  letter-spacing: 0.15em;
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--white);
+  letter-spacing: 0.05em;
+}
+
+/* Hamburger */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: auto;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  transition: all 0.3s ease;
+}
+
+/* ===== STATS BAR ===== */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--blue-dark);
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 2px solid var(--blue-accent);
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 32px;
+  border-right: 1px solid var(--glass-border);
+  transition: background var(--transition);
+}
+
+.stat-card:last-child { border-right: none; }
+
+.stat-card:hover {
+  background: rgba(21, 101, 192, 0.1);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 136, 229, 0.15);
+  border: 1px solid var(--glass-border);
+  flex-shrink: 0;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.big-num {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--blue-glow);
+  line-height: 1;
+}
+
+.big-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--grey-mid);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .nav-links { gap: 0; }
+  .nav-links li a { padding: 8px 10px; font-size: 0.72rem; }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 14px 20px;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 12px 0;
+    border-top: 1px solid var(--glass-border);
+    margin-top: 12px;
+    gap: 0;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .nav-links li a {
+    display: block;
+    padding: 12px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .nav-stats {
+    display: none;
+  }
+
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+}

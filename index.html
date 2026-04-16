@@ -2,164 +2,761 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>New York ITA RP — ERLC</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/factions.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/shop.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-brand">
-      <span class="brand-icon">🗽</span>
-      <span class="brand-text">NY<span class="accent">ITA</span>RP</span>
+      <span class="brand-badge">ERLC</span>
+      <span class="brand-title">NY<span class="accent">ITA</span>RP</span>
     </div>
-    <div class="hamburger" id="hamburger">
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
       <span></span><span></span><span></span>
-    </div>
+    </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="fazioni.html">Fazioni</a></li>
-      <li><a href="regolamento.html">Regolamento</a></li>
-      <li><a href="storia.html">Storia</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="inizia.html">Come Iniziare</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#storia">Storia</a></li>
+      <li><a href="#iniziare">Come Iniziare</a></li>
+      <li><a href="#fazioni">Fazioni</a></li>
+      <li><a href="#regolamento">Regolamento</a></li>
+      <li><a href="#shop">Shop</a></li>
     </ul>
+    <div class="nav-stats">
+      <div class="stat-box" id="membersBox">
+        <span class="stat-label">MEMBRI</span>
+        <span class="stat-value" id="membersCount">1.247</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">VERSIONE</span>
+        <span class="stat-value">v2.4.1</span>
+      </div>
+    </div>
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="scanlines"></div>
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="city-grid"></div>
+      <div class="scanline"></div>
+    </div>
     <div class="hero-content">
-      <div class="hero-badge">ERLC SERVER ITALIANO</div>
-      <h1 class="hero-title">NEW YORK<br/><span class="accent">ITA RP</span></h1>
-      <p class="hero-sub">Il roleplay più autentico su Emergency Response Liberty County</p>
-      <div class="hero-btns">
-        <a href="inizia.html" class="btn-primary">Inizia Ora</a>
-        <a href="fazioni.html" class="btn-secondary">Scegli Fazione</a>
+      <div class="hero-eyebrow">Emergency Response: Liberty City</div>
+      <h1 class="hero-title">NEW YORK<br/><span class="hero-sub">ITA RP</span></h1>
+      <p class="hero-desc">Il roleplay italiano più immersivo su ERLC. Forze dell'ordine, criminalità organizzata, servizi civili. Scegli il tuo ruolo nella Grande Mela.</p>
+      <div class="hero-cta">
+        <a href="#iniziare" class="btn btn-primary">ENTRA NEL SERVER</a>
+        <a href="#fazioni" class="btn btn-outline">SCEGLI FAZIONE</a>
       </div>
     </div>
-    <div class="hero-overlay-text">New York City</div>
-  </section>
-
-  <!-- STATS BADGES -->
-  <section class="stats-strip">
-    <div class="stat-card glow-blue">
-      <div class="stat-label">Membri Totali</div>
-      <div class="stat-number">265</div>
-    </div>
-    <div class="stat-card glow-blue">
-      <div class="stat-label">Versione Server</div>
-      <div class="stat-number">v3</div>
-    </div>
-    <div class="stat-card glow-blue">
-      <div class="stat-label">Fazioni Attive</div>
-      <div class="stat-number">5</div>
-    </div>
-    <div class="stat-card glow-blue">
-      <div class="stat-label">Stato Server</div>
-      <div class="stat-number online">Offline</div>
+    <div class="hero-ticker">
+      <div class="ticker-inner">
+        <span>🚨 NYPD — ATTIVI 24/7</span>
+        <span>🔫 ICE — OPERAZIONI IN CORSO</span>
+        <span>⚖️ PROCURA — CASI APERTI</span>
+        <span>🔥 NYFD — IN SERVIZIO</span>
+        <span>🚑 EMS — PRONTO INTERVENTO</span>
+        <span>🛃 BORDER PATROL — CONTROLLI ATTIVI</span>
+        <span>🏛️ NYSO — ORDINE PUBBLICO</span>
+        <span>🚧 DOT — MANUTENZIONE STRADALE</span>
+      </div>
     </div>
   </section>
 
-  <!-- FAZIONI PREVIEW -->
-  <section class="section fazioni-preview">
-    <h2 class="section-title">LE <span class="accent">FAZIONI</span></h2>
-    <p class="section-sub">Scegli il tuo ruolo nel cuore di New York</p>
-    <div class="fazioni-grid">
-      <a href="fazioni.html#nypd" class="fazione-card nypd">
-        <div class="faz-icon">🚔</div>
-        <div class="faz-name">NYPD</div>
-        <div class="faz-desc">New York Police Department</div>
-        <div class="faz-arrow">→</div>
-      </a>
-      <a href="fazioni.html#nyso" class="fazione-card nyso">
-        <div class="faz-icon">⭐</div>
-        <div class="faz-name">NYSO</div>
-        <div class="faz-desc">New York Sheriff's Office</div>
-        <div class="faz-arrow">→</div>
-      </a>
-      <a href="fazioni.html#nyfd" class="fazione-card nyfd">
-        <div class="faz-icon">🚒</div>
-        <div class="faz-name">NYFD</div>
-        <div class="faz-desc">New York Fire Department</div>
-        <div class="faz-arrow">→</div>
-      </a>
-      <a href="fazioni.html#ems" class="fazione-card ems">
-        <div class="faz-icon">🚑</div>
-        <div class="faz-name">EMS</div>
-        <div class="faz-desc">Emergency Medical Services</div>
-        <div class="faz-arrow">→</div>
-      </a>
-      <a href="fazioni.html#dot" class="fazione-card dot">
-        <div class="faz-icon">🚧</div>
-        <div class="faz-name">DOT</div>
-        <div class="faz-desc">Department of Transportation</div>
-        <div class="faz-arrow">→</div>
-      </a>
-      <a href="fazioni.html#aziende" class="fazione-card aziende">
-        <div class="faz-icon">🏢</div>
-        <div class="faz-name">Aziende</div>
-        <div class="faz-desc">Imprenditori e Lavoratori</div>
-        <div class="faz-arrow">→</div>
-      </a>
-      <a href="fazioni.html#gang" class="fazione-card gang">
-        <div class="faz-icon">🔫</div>
-        <div class="faz-name">Gang</div>
-        <div class="faz-desc">Strada e Territorio</div>
-        <div class="faz-arrow">→</div>
-      </a>
-      <a href="fazioni.html#mafie" class="fazione-card mafie">
-        <div class="faz-icon">🥀</div>
-        <div class="faz-name">Mafie</div>
-        <div class="faz-desc">Il Crimine Organizzato</div>
-        <div class="faz-arrow">→</div>
-      </a>
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-card">
+      <div class="stat-icon">👥</div>
+      <div class="stat-info">
+        <span class="big-num" id="totalMembers">1.247</span>
+        <span class="big-label">Membri Totali</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🎮</div>
+      <div class="stat-info">
+        <span class="big-num">v2.4.1</span>
+        <span class="big-label">Versione Server</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🗺️</div>
+      <div class="stat-info">
+        <span class="big-num">11</span>
+        <span class="big-label">Fazioni Attive</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">⏱️</div>
+      <div class="stat-info">
+        <span class="big-num">24/7</span>
+        <span class="big-label">Server Online</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STORIA -->
+  <section class="section storia-section" id="storia">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// LORE</span>
+        <h2 class="section-title">STORIA DEL <span class="accent">SERVER</span></h2>
+      </div>
+      <div class="storia-grid">
+        <div class="storia-timeline">
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-date">2022 — Fondazione</span>
+              <h3>Le Origini</h3>
+              <p>New York ITA RP nasce dall'idea di un gruppo di appassionati di roleplay italiani, stanchi dei server generici e privi di struttura. Il sogno: ricreare fedelmente l'ecosistema urbano di New York su ERLC, con fazioni vere, gerarchie reali e storie che si intrecciano.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-date">2023 — Espansione</span>
+              <h3>La Grande Crescita</h3>
+              <p>Il server supera i 500 membri. Vengono istituite le prime fazioni ufficiali: NYPD, EMS e le prime cellule criminali. Nasce il sistema economico interno e le prime regole di RP strutturato. La comunità si consolida attorno a eventi settimanali coordinati dagli staff.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-date">2024 — Consolidamento</span>
+              <h3>L'Ordine e il Caos</h3>
+              <p>Con l'arrivo di ICE, Border Patrol e la Procura, il server raggiunge un equilibrio dinamico tra legalità e crimine. Le prime mafie ottengono riconoscimento ufficiale. Nasce la DOT per la gestione civile del territorio. I 1000 membri vengono superati.</p>
+            </div>
+          </div>
+          <div class="timeline-item active">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-date">2025 — Oggi</span>
+              <h3>New Era</h3>
+              <p>Con la versione 2.4.1, il server è completamente rinnovato: nuove meccaniche di RP, sistema giudiziario funzionante, economia avanzata e 11 fazioni pienamente operative. NY ITA RP è il punto di riferimento del roleplay ERLC in italiano.</p>
+            </div>
+          </div>
+        </div>
+        <div class="storia-card">
+          <div class="storia-badge">NEW YORK CITY</div>
+          <div class="storia-map-art">
+            <div class="map-block" style="--d:0.1s"></div>
+            <div class="map-block" style="--d:0.2s"></div>
+            <div class="map-block" style="--d:0.3s"></div>
+            <div class="map-block" style="--d:0.4s"></div>
+            <div class="map-block" style="--d:0.5s"></div>
+            <div class="map-block" style="--d:0.6s"></div>
+          </div>
+          <blockquote class="storia-quote">
+            "Non è solo un gioco. È una città che respira, con storie reali scritte da persone reali."
+            <cite>— Fondatori di NY ITA RP</cite>
+          </blockquote>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- QUICK INFO -->
-  <section class="section quick-info">
-    <div class="info-card">
-      <div class="info-icon">📜</div>
-      <h3>Regolamento</h3>
-      <p>Regole chiare per un RP di qualità. Rispetta tutti i giocatori.</p>
-      <a href="regolamento.html" class="info-link">Leggi →</a>
+  <!-- COME INIZIARE -->
+  <section class="section iniziare-section" id="iniziare">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// TUTORIAL</span>
+        <h2 class="section-title">COME <span class="accent">INIZIARE</span></h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-icon">🎮</div>
+          <h3>Acquista ERLC</h3>
+          <p>Acquista Emergency Response: Liberty City su Roblox. È il gioco base necessario per accedere al nostro server privato.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-icon">💬</div>
+          <h3>Unisciti a Discord</h3>
+          <p>Entra nel nostro server Discord ufficiale. Qui troverai tutte le informazioni, i canali delle fazioni e lo staff a disposizione.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-icon">📋</div>
+          <h3>Leggi il Regolamento</h3>
+          <p>Prima di qualsiasi cosa, leggi attentamente il regolamento completo. La conoscenza delle regole è fondamentale per un RP di qualità.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <div class="step-icon">✍️</div>
+          <h3>Crea il Personaggio</h3>
+          <p>Compila la scheda personaggio nel canale apposito di Discord. Nome, cognome, background e scelta della fazione iniziale.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">05</div>
+          <div class="step-icon">🏛️</div>
+          <h3>Scegli la Fazione</h3>
+          <p>Candidati per la fazione che preferisci tramite il modulo di candidatura. Ogni fazione ha requisiti e un processo di selezione.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">06</div>
+          <div class="step-icon">🗽</div>
+          <h3>Benvenuto a New York</h3>
+          <p>Una volta approvato, sei ufficialmente un cittadino di NY ITA RP. Il server è aperto, la storia inizia ora.</p>
+        </div>
+      </div>
+      <div class="iniziare-cta">
+        <a href="#" class="btn btn-primary btn-large">UNISCITI AL DISCORD</a>
+      </div>
     </div>
-    <div class="info-card">
-      <div class="info-icon">📖</div>
-      <h3>Storia del Server</h3>
-      <p>Scopri le origini e l'evoluzione di NY ITA RP.</p>
-      <a href="storia.html" class="info-link">Scopri →</a>
+  </section>
+
+  <!-- FAZIONI -->
+  <section class="section fazioni-section" id="fazioni">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// FACTIONS</span>
+        <h2 class="section-title">LE <span class="accent">FAZIONI</span></h2>
+      </div>
+
+      <div class="factions-tabs">
+        <button class="tab-btn active" data-tab="law">⚖️ Forze dell'Ordine</button>
+        <button class="tab-btn" data-tab="civil">🏙️ Servizi Civili</button>
+        <button class="tab-btn" data-tab="crime">💀 Crimine</button>
+      </div>
+
+      <!-- LAW ENFORCEMENT -->
+      <div class="tab-content active" id="tab-law">
+        <div class="factions-grid" id="factions-container">
+
+          <div class="faction-card" data-faction="nypd">
+            <div class="faction-stripe" style="background: var(--blue-mid)"></div>
+            <div class="faction-header">
+              <span class="faction-badge" style="background: var(--blue-mid)">NYPD</span>
+              <span class="faction-status online">● ATTIVO</span>
+            </div>
+            <h3 class="faction-name">New York Police Department</h3>
+            <p class="faction-desc">La principale forza di polizia di New York. Pattugliamento, arresti, investigazioni e gestione dell'ordine pubblico quotidiano. La colonna portante della legalità nel server.</p>
+            <div class="faction-stats">
+              <span>👮 Rank: Patrolman → Commissioner</span>
+              <span>🚔 Veicoli: Crown Vic, SUV, Moto</span>
+            </div>
+            <a href="#" class="faction-btn">CANDIDATI</a>
+          </div>
+
+          <div class="faction-card" data-faction="ice">
+            <div class="faction-stripe" style="background: var(--blue-dark)"></div>
+            <div class="faction-header">
+              <span class="faction-badge" style="background: var(--blue-dark)">ICE</span>
+              <span class="faction-status online">● ATTIVO</span>
+            </div>
+            <h3 class="faction-name">Immigration & Customs Enforcement</h3>
+            <p class="faction-desc">Agenzia federale responsabile del controllo dell'immigrazione clandestina e del traffico di merci illegali. Opera in modo semi-clandestino con operazioni speciali.</p>
+            <div class="faction-stats">
+              <span>🔍 Rank: Agent → Special Agent in Charge</span>
+              <span>🚗 Veicoli: Civili, SUV Black</span>
+            </div>
+            <a href="#" class="faction-btn">CANDIDATI</a>
+          </div>
+
+          <div class="faction-card" data-faction="procura">
+            <div class="faction-stripe" style="background: var(--blue-accent)"></div>
+            <div class="faction-header">
+              <span class="faction-badge" style="background: var(--blue-accent)">PROCURA</span>
+              <span class="faction-status online">● ATTIVO</span>
+            </div>
+            <h3 class="faction-name">Procura Distrettuale di NY</h3>
+            <p class="faction-desc">L'ufficio del Procuratore Distrettuale gestisce i procedimenti penali, emette mandati e coordina con le forze dell'ordine. Fazione di RP puro basata su casi giudiziari.</p>
+            <div class="faction-stats">
+              <span>⚖️ Rank: ADA → District Attorney</span>
+              <span>📁 Specialità: Processi, Mandati, Accordi</span>
+            </div>
+            <a href="#" class="faction-btn">CANDIDATI</a>
+          </div>
+
+          <div class="faction-card" data-faction="nyso">
+            <div class="faction-stripe" style="background: #1a4a8a"></div>
+            <div class="faction-header">
+              <span class="faction-badge" style="background: #1a4a8a">NYSO</span>
+              <span class="faction-status online">● ATTIVO</span>
+            </div>
+            <h3 class="faction-name">New York Sheriff's Office</h3>
+            <p class="faction-desc">Lo Sheriff gestisce la sicurezza nelle contee periferiche e supporta le operazioni del NYPD in situazioni di emergenza. Autorità giudiziaria indipendente con ampi poteri.</p>
+            <div class="faction-stats">
+              <span>🤠 Rank: Deputy → Sheriff</span>
+              <span>🚘 Veicoli: Pickup, SUV</span>
+            </div>
+            <a href="#" class="faction-btn">CANDIDATI</a>
+          </div>
+
+          <div class="faction-card" data-faction="bp">
+            <div class="faction-stripe" style="background: #0d3366"></div>
+            <div class="faction-header">
+              <span class="faction-badge" style="background: #0d3366">BP</span>
+              <span class="faction-status online">● ATTIVO</span>
+            </div>
+            <h3 class="faction-name">Border Patrol</h3>
+            <p class="faction-desc">Pattuglia i confini e i punti di accesso alla città. Controlla il traffico di persone e merci, coordinandosi con ICE per operazioni anti-contrabbando.</p>
+            <div class="faction-stats">
+              <span>🛃 Rank: Agent → Supervisor</span>
+              <span>🚁 Veicoli: Truck, Elicottero, ATV</span>
+            </div>
+            <a href="#" class="faction-btn">CANDIDATI</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CIVIL SERVICES -->
+      <div class="tab-content" id="tab-civil">
+        <div class="factions-grid">
+
+          <div class="faction-card" data-faction="nyfd">
+            <div class="faction-stripe" style="background: #c0392b"></div>
+            <div class="faction-header">
+              <span class="faction-badge" style="background: #c0392b">NYFD</span>
+              <span class="faction-status online">● ATTIVO</span>
+            </div>
+            <h3 class="faction-name">New York Fire Department</h3>
+            <p class="faction-desc">I pompieri di New York gestiscono incendi, salvataggi e operazioni di emergenza. Fazione fondamentale per eventi catastrofici e scenari di RP urbano intenso.</p>
+            <div class="faction-stats">
+              <span>🔥 Rank: Firefighter → Chief</span>
+              <span>🚒 Veicoli: Autopompa, Scala, Pick-up</span>
+            </div>
+            <a href="#" class="faction-btn">CANDIDATI</a>
+          </div>
+
+          <div class="faction-card" data-faction="ems">
+            <div class="faction-stripe" style="background: #27ae60"></div>
+            <div class="faction-header">
+              <span class="faction-badge" style="background: #27ae60">EMS</span>
+              <span class="faction-status online">● ATTIVO</span>
+            </div>
+            <h3 class="faction-name">Emergency Medical Services</h3>
+            <p class="faction-desc">Paramedici e medici di emergenza. Intervengono su scene di incidenti, sparatorie e qualsiasi emergenza medica. Il loro lavoro è essenziale per la sopravvivenza del RP.</p>
+            <div class="faction-stats">
+              <span>🚑 Rank: EMT → Medical Director</span>
+              <span>🏥 Veicoli: Ambulanza, SUV Medico</span>
+            </div>
+            <a href="#" class="faction-btn">CANDIDATI</a>
+          </div>
+
+          <div class="faction-card" data-faction="dot">
+            <div class="faction-stripe" style="background: #e67e22"></div>
+            <div class="faction-header">
+              <span class="faction-badge" style="background: #e67e22">DOT</span>
+              <span class="faction-status online">● ATTIVO</span>
+            </div>
+            <h3 class="faction-name">Department of Transportation</h3>
+            <p class="faction-desc">Gestione delle strade, segnaletica, controllo del traffico e manutenzione delle infrastrutture urbane. Fazione civile fondamentale per il realismo della città.</p>
+            <div class="faction-stats">
+              <span>🚧 Rank: Worker → Director</span>
+              <span>🛻 Veicoli: Camion, Van, Attrezzatura</span>
+            </div>
+            <a href="#" class="faction-btn">CANDIDATI</a>
+          </div>
+
+          <div class="faction-card" data-faction="aziende">
+            <div class="faction-stripe" style="background: #8e44ad"></div>
+            <div class="faction-header">
+              <span class="faction-badge" style="background: #8e44ad">BIZ</span>
+              <span class="faction-status online">● ATTIVO</span>
+            </div>
+            <h3 class="faction-name">Aziende Private</h3>
+            <p class="faction-desc">Imprenditori e lavoratori del settore privato. Gestisci la tua attività commerciale, trasporti, logistica o media. Il motore economico legale della città.</p>
+            <div class="faction-stats">
+              <span>💼 Tipo: Commercio, Media, Trasporti</span>
+              <span>💰 Sistema: Economia avanzata</span>
+            </div>
+            <a href="#" class="faction-btn">CANDIDATI</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CRIME -->
+      <div class="tab-content" id="tab-crime">
+        <div class="factions-grid">
+
+          <div class="faction-card dark" data-faction="gang">
+            <div class="faction-stripe" style="background: #e74c3c"></div>
+            <div class="faction-header">
+              <span class="faction-badge" style="background: #e74c3c">GANG</span>
+              <span class="faction-status warning">● SORVEGLIATO</span>
+            </div>
+            <h3 class="faction-name">Gang Urbane</h3>
+            <p class="faction-desc">Le gang controllano i quartieri periferici di New York. Spaccio, estorsioni e scontri territoriali definiscono il loro quotidiano. Alto rischio, alta ricompensa. Richiede approvazione.</p>
+            <div class="faction-stats">
+              <span>🔫 Struttura: Soldato → Boss di Strada</span>
+              <span>🏚️ Zona: Bronx, Brooklyn, Queens</span>
+            </div>
+            <a href="#" class="faction-btn danger">CANDIDATI</a>
+          </div>
+
+          <div class="faction-card dark" data-faction="mafia">
+            <div class="faction-stripe" style="background: #2c2c2c"></div>
+            <div class="faction-header">
+              <span class="faction-badge" style="background: #1a1a2e; border: 1px solid var(--blue-accent)">MAFIA</span>
+              <span class="faction-status warning">● SORVEGLIATO</span>
+            </div>
+            <h3 class="faction-name">Organizzazioni Mafiose</h3>
+            <p class="faction-desc">La criminalità organizzata opera nell'ombra. Riciclaggio, traffici internazionali, corruzione e omicidi su commissione. La vera élite del crimine. Accesso molto selettivo.</p>
+            <div class="faction-stats">
+              <span>🤵 Struttura: Associato → Don</span>
+              <span>💎 Specialità: Traffici, Corruzione, Omicidi</span>
+            </div>
+            <a href="#" class="faction-btn danger">CANDIDATI</a>
+          </div>
+
+        </div>
+        <div class="crime-warning">
+          <span>⚠️</span>
+          <p>Le fazioni criminali richiedono una candidatura approfondita, un background RP consolidato e l'approvazione dello staff. Il crimine organizzato è soggetto a regole speciali anti-powergaming.</p>
+        </div>
+      </div>
+
     </div>
-    <div class="info-card">
-      <div class="info-icon">🛒</div>
-      <h3>Shop</h3>
-      <p>Acquista vantaggi esclusivi e supporta il server.</p>
-      <a href="shop.html" class="info-link">Acquista →</a>
+  </section>
+
+  <!-- REGOLAMENTO -->
+  <section class="section reg-section" id="regolamento">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// RULES</span>
+        <h2 class="section-title">REGOLA<span class="accent">MENTO</span></h2>
+      </div>
+      <div class="reg-grid">
+        <div class="reg-sidebar">
+          <button class="reg-nav active" data-reg="generale">📋 Regole Generali</button>
+          <button class="reg-nav" data-reg="rp">🎭 Regole RP</button>
+          <button class="reg-nav" data-reg="combattimento">⚔️ Combattimento</button>
+          <button class="reg-nav" data-reg="fazioni">🏛️ Fazioni</button>
+          <button class="reg-nav" data-reg="sanzioni">🔨 Sanzioni</button>
+        </div>
+        <div class="reg-content">
+          <div class="reg-panel active" id="reg-generale">
+            <h3>Regole Generali</h3>
+            <div class="rule-item">
+              <span class="rule-num">§1</span>
+              <div>
+                <strong>Rispetto</strong>
+                <p>Il rispetto verso tutti i membri è obbligatorio sia in-game che su Discord. Insulti, discriminazioni o atteggiamenti tossici portano al ban immediato.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-num">§2</span>
+              <div>
+                <strong>Identità Reale</strong>
+                <p>È severamente vietato divulgare informazioni personali di altri utenti (doxxing). La privacy di ogni membro è sacra.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-num">§3</span>
+              <div>
+                <strong>Account Multipli</strong>
+                <p>È vietato usare più account per aggirare ban o per ottenere vantaggi sleali. Ogni giocatore = un solo account.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-num">§4</span>
+              <div>
+                <strong>Staff</strong>
+                <p>Le decisioni dello staff sono definitive. I ricorsi vanno presentati nei canali appositi con prove concrete. Mai contestare uno staff in-game.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-num">§5</span>
+              <div>
+                <strong>Cheats & Exploit</strong>
+                <p>L'uso di cheat, script, bug exploit o qualsiasi vantaggio non legittimo è motivo di ban permanente senza appello.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reg-panel" id="reg-rp">
+            <h3>Regole di Roleplay</h3>
+            <div class="rule-item">
+              <span class="rule-num">§6</span>
+              <div>
+                <strong>No Metagaming</strong>
+                <p>È vietato usare informazioni OOC (Out of Character) per influenzare azioni IC (In Character). Ciò che sai come giocatore non lo sa il tuo personaggio.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-num">§7</span>
+              <div>
+                <strong>No Powergaming</strong>
+                <p>È vietato eseguire azioni impossibili o irrealistiche, forzare azioni su altri giocatori senza consenso o rendere il proprio personaggio invincibile.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-num">§8</span>
+              <div>
+                <strong>Fear RP</strong>
+                <p>Ogni personaggio deve temere per la propria vita. Non è possibile ignorare armi puntate o minacce concrete. La paura è realistica e obbligatoria.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-num">§9</span>
+              <div>
+                <strong>Value of Life</strong>
+                <p>Il tuo personaggio deve valorizzare la propria vita. Azioni suicide o kamikaze senza senso narrativo sono vietate e sanzionate.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-num">§10</span>
+              <div>
+                <strong>CK (Character Kill)</strong>
+                <p>La morte permanente di un personaggio (CK) deve essere approvata dallo staff o essere parte di una storia concordata. Nessun CK forzato.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reg-panel" id="reg-combattimento">
+            <h3>Regole di Combattimento</h3>
+            <div class="rule-item">
+              <span class="rule-num">§11</span>
+              <div>
+                <strong>RDM (Random Death Match)</strong>
+                <p>È assolutamente vietato uccidere altri giocatori senza una valida motivazione RP. Ogni scontro armato deve avere una storia dietro.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-num">§12</span>
+              <div>
+                <strong>VDM (Vehicle Death Match)</strong>
+                <p>È vietato usare i veicoli come armi per investire intenzionalmente altri giocatori senza contesto RP valido.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-num">§13</span>
+              <div>
+                <strong>Regola del 10 Minuti</strong>
+                <p>Dopo essere stati "uccisi" in-game, il personaggio deve rimanere in NLR (New Life Rule) per 10 minuti e non può tornare sulla scena del conflitto.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-num">§14</span>
+              <div>
+                <strong>Combattimento Verbale</strong>
+                <p>Prima di ogni sparatoria, deve esserci un minimo di confronto verbale (almeno 3 righe di dialogo RP) salvo situazioni di emergenza documentate.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reg-panel" id="reg-fazioni">
+            <h3>Regole delle Fazioni</h3>
+            <div class="rule-item">
+              <span class="rule-num">§15</span>
+              <div>
+                <strong>Doppia Fazione</strong>
+                <p>Non è possibile appartenere a due fazioni contemporaneamente. Eccezione: civili possono lavorare in aziende private + avere un ruolo civile secondario.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-num">§16</span>
+              <div>
+                <strong>Uniformi & Veicoli</strong>
+                <p>Ogni membro di una fazione DEVE indossare l'uniforme corretta e usare solo i veicoli assegnati alla propria fazione e al proprio grado.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-num">§17</span>
+              <div>
+                <strong>Catena di Comando</strong>
+                <p>La catena di comando deve essere rispettata in-game. I ranghi superiori hanno autorità. La gerarchia non può essere ignorata senza conseguenze RP.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <span class="rule-num">§18</span>
+              <div>
+                <strong>Attività Minima</strong>
+                <p>Ogni membro di una fazione deve garantire un'attività minima settimanale. Assenze prolungate non comunicate portano al declassamento o espulsione.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reg-panel" id="reg-sanzioni">
+            <h3>Sistema Sanzionatorio</h3>
+            <div class="sanction-table">
+              <div class="sanction-row header">
+                <span>INFRAZIONE</span>
+                <span>PRIMA VOLTA</span>
+                <span>RECIDIVA</span>
+              </div>
+              <div class="sanction-row">
+                <span>RDM / VDM Lieve</span>
+                <span class="warn">Warning</span>
+                <span class="kick">Kick + 24h</span>
+              </div>
+              <div class="sanction-row">
+                <span>RDM / VDM Grave</span>
+                <span class="kick">Kick + 48h</span>
+                <span class="ban">Ban 7gg</span>
+              </div>
+              <div class="sanction-row">
+                <span>Metagaming</span>
+                <span class="warn">Warning + Nota</span>
+                <span class="ban">Ban 3gg</span>
+              </div>
+              <div class="sanction-row">
+                <span>Powergaming</span>
+                <span class="kick">Kick</span>
+                <span class="ban">Ban 7gg</span>
+              </div>
+              <div class="sanction-row">
+                <span>Cheat / Exploit</span>
+                <span class="pban">Ban Permanente</span>
+                <span class="pban">Ban Permanente</span>
+              </div>
+              <div class="sanction-row">
+                <span>Comportamento Tossico</span>
+                <span class="kick">Kick + Warning</span>
+                <span class="pban">Ban Permanente</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="info-card">
-      <div class="info-icon">🎮</div>
-      <h3>Come Iniziare</h3>
-      <p>Guida passo-passo per entrare nel server.</p>
-      <a href="inizia.html" class="info-link">Inizia →</a>
+  </section>
+
+  <!-- SHOP -->
+  <section class="section shop-section" id="shop">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// STORE</span>
+        <h2 class="section-title">SHOP <span class="accent">UFFICIALE</span></h2>
+        <p class="section-sub">Supporta il server e ottieni vantaggi esclusivi. Tutti gli acquisti vanno ai costi di gestione del server.</p>
+      </div>
+      <div class="shop-grid">
+        <div class="shop-card featured">
+          <div class="shop-badge">POPOLARE</div>
+          <div class="shop-icon">⭐</div>
+          <h3 class="shop-name">VIP Bronze</h3>
+          <div class="shop-price">€4.99<span>/mese</span></div>
+          <ul class="shop-perks">
+            <li>✅ Tag VIP su Discord</li>
+            <li>✅ Canale riservato VIP</li>
+            <li>✅ Priorità nelle candidature</li>
+            <li>✅ Skin veicolo esclusiva</li>
+            <li>❌ Slot riservato nel server</li>
+            <li>❌ Accesso beta features</li>
+          </ul>
+          <a href="#" class="btn btn-primary">ACQUISTA</a>
+        </div>
+
+        <div class="shop-card">
+          <div class="shop-badge gold">GOLD</div>
+          <div class="shop-icon">🥇</div>
+          <h3 class="shop-name">VIP Gold</h3>
+          <div class="shop-price">€9.99<span>/mese</span></div>
+          <ul class="shop-perks">
+            <li>✅ Tutto di Bronze</li>
+            <li>✅ Slot riservato nel server</li>
+            <li>✅ Accesso beta features</li>
+            <li>✅ Costume esclusivo Gold</li>
+            <li>✅ Bonus economia in-game</li>
+            <li>❌ Accesso a veicoli rari</li>
+          </ul>
+          <a href="#" class="btn btn-primary">ACQUISTA</a>
+        </div>
+
+        <div class="shop-card elite">
+          <div class="shop-badge elite-badge">ELITE</div>
+          <div class="shop-icon">💎</div>
+          <h3 class="shop-name">VIP Platinum</h3>
+          <div class="shop-price">€19.99<span>/mese</span></div>
+          <ul class="shop-perks">
+            <li>✅ Tutto di Gold</li>
+            <li>✅ Accesso a veicoli rari</li>
+            <li>✅ Nome colorato in-game</li>
+            <li>✅ Evento privato mensile</li>
+            <li>✅ Accesso staff lounge</li>
+            <li>✅ Badge Platinum esclusivo</li>
+          </ul>
+          <a href="#" class="btn btn-primary">ACQUISTA</a>
+        </div>
+
+        <div class="shop-card">
+          <div class="shop-icon">🎭</div>
+          <h3 class="shop-name">Pacchetto Evento</h3>
+          <div class="shop-price">€7.99<span>/una tantum</span></div>
+          <ul class="shop-perks">
+            <li>✅ Accesso evento speciale</li>
+            <li>✅ Skin evento esclusiva</li>
+            <li>✅ Badge permanente</li>
+            <li>✅ Ruolo Discord "Veterano"</li>
+          </ul>
+          <a href="#" class="btn btn-outline">ACQUISTA</a>
+        </div>
+      </div>
+      <p class="shop-disclaimer">⚠️ Tutti gli acquisti sono definitivi e non rimborsabili. I vantaggi in-game non alterano il bilanciamento del RP. Il server non è affiliato con Roblox Corporation.</p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-brand">🗽 NEW YORK ITA RP</div>
-    <p class="footer-text">Server ERLC Italiano — Roleplay di qualità dal 2022</p>
-    <div class="footer-links">
-      <a href="#">Discord</a>
-      <a href="#">Roblox Group</a>
-      <a href="#">Regolamento</a>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-title large">NY<span class="accent">ITA</span>RP</div>
+        <p>Il roleplay italiano su ERLC. Nato dalla passione di una comunità, costruito per durare.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn">Discord</a>
+          <a href="#" class="social-btn">YouTube</a>
+          <a href="#" class="social-btn">TikTok</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Navigazione</h4>
+        <a href="#home">Home</a>
+        <a href="#storia">Storia</a>
+        <a href="#iniziare">Come Iniziare</a>
+        <a href="#fazioni">Fazioni</a>
+        <a href="#regolamento">Regolamento</a>
+        <a href="#shop">Shop</a>
+      </div>
+      <div class="footer-links">
+        <h4>Fazioni</h4>
+        <a href="#">NYPD</a>
+        <a href="#">ICE</a>
+        <a href="#">Procura</a>
+        <a href="#">EMS / NYFD</a>
+        <a href="#">Gang & Mafie</a>
+      </div>
+      <div class="footer-info">
+        <h4>Server Info</h4>
+        <div class="info-box">
+          <span>Membri Totali</span>
+          <strong>1.247</strong>
+        </div>
+        <div class="info-box">
+          <span>Versione</span>
+          <strong>v2.4.1</strong>
+        </div>
+        <div class="info-box">
+          <span>Stato</span>
+          <strong style="color: #2ecc71">● ONLINE</strong>
+        </div>
+      </div>
     </div>
-    <p class="footer-copy">© 2025 New York ITA RP. Tutti i diritti riservati.</p>
+    <div class="footer-bottom">
+      <span>© 2025 New York ITA RP — Server non affiliato con Roblox Corporation o ERLC.</span>
+      <span>Made with ❤️ dalla community italiana</span>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/tabs.js"></script>
+  <script src="js/regolamento.js"></script>
+  <script src="js/navbar.js"></script>
 </body>
 </html>
