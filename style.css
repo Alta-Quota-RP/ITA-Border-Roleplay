@@ -3,19 +3,19 @@
    ======================================== */
 
 :root {
-  --blue-1: #1e150a;
-  --blue-2: #30200d;
-  --blue-3: #443111;
-  --blue-4: #6e431a;
-  --accent: #ff8f1e;
-  --accent-bright: #ffa04d;
-  --accent-glow: rgba(255, 146, 30, 0.35);
-  --accent-dark: #b03f0b;
+  --blue-1: #0a1e1c;
+  --blue-2: #0d2f30;
+  --blue-3: #113f44;
+  --blue-4: #1a616e;
+  --accent: #1efff8;
+  --accent-bright: #4df9ff;
+  --accent-glow: rgba(30, 255, 255, 0.35);
+  --accent-dark: #0b81b0;
   --white: #f0f4ff;
-  --grey: #cc9f88;
-  --dark-text: #c8d4f0;
-  --card-bg: rgba(55, 33, 15, 0.85);
-  --border: rgba(255, 98, 30, 0.25);
+  --grey: #88cccc;
+  --dark-text: #c8f0ef;
+  --card-bg: rgba(15, 55, 54, 0.85);
+  --border: rgba(30, 214, 255, 0.25);
   --font-display: 'Bebas Neue', sans-serif;
   --font-body: 'Rajdhani', sans-serif;
   --font-mono: 'Share Tech Mono', monospace;
