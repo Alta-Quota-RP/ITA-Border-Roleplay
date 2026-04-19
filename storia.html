@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Storia del Server — Brescia Italia Roleplay</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .storia-body { max-width: 900px; margin: 0 auto; padding: 0 2rem 6rem; }
+
+    /* TIMELINE */
+    .timeline { position: relative; padding: 2rem 0; }
+    .timeline::before {
+      content: '';
+      position: absolute; left: 28px; top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--verde), var(--oro), var(--rosso));
+    }
+    .tl-item {
+      position: relative; padding-left: 72px; margin-bottom: 3rem;
+    }
+    .tl-dot {
+      position: absolute; left: 18px; top: 6px;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--blu-scuro);
+      border: 3px solid var(--oro);
+      transition: all 0.3s;
+    }
+    .tl-item:hover .tl-dot { background: var(--oro); box-shadow: 0 0 16px rgba(212,175,55,0.5); }
+    .tl-date {
+      font-family: 'Oswald', sans-serif; font-size: 0.72rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--oro); margin-bottom: 0.4rem;
+    }
+    .tl-card {
+      background: var(--blu-card);
+      border: 1px solid var(--bordo);
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: all 0.25s;
+    }
+    .tl-item:hover .tl-card { border-color: rgba(212,175,55,0.4); transform: translateX(4px); }
+    .tl-card h3 {
+      font-family: 'Oswald', sans-serif; font-size: 1.15rem;
+      font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+      color: var(--bianco); margin-bottom: 0.5rem;
+    }
+    .tl-card p { font-size: 0.9rem; color: var(--testo-soft); line-height: 1.7; }
+    .tl-tag {
+      display: inline-block; margin-top: 0.75rem;
+      padding: 0.2rem 0.6rem; font-family: 'Oswald', sans-serif;
+      font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+      border-radius: 3px; background: rgba(212,175,55,0.1);
+      color: var(--oro); border: 1px solid rgba(212,175,55,0.2);
+    }
+
+    /* TEAM */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.25rem; margin-top: 2rem;
+    }
+    .team-card {
+      background: var(--blu-card);
+      border: 1px solid var(--bordo);
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.25s;
+    }
+    .team-card:hover { border-color: var(--oro); transform: translateY(-4px); }
+    .team-avatar {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--verde), var(--oro));
+      margin: 0 auto 0.75rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem;
+    }
+    .team-name {
+      font-family: 'Oswald', sans-serif; font-weight: 600;
+      text-transform: uppercase; font-size: 0.95rem;
+      color: var(--bianco); margin-bottom: 0.25rem;
+    }
+    .team-role { font-size: 0.78rem; color: var(--testo-soft); letter-spacing: 0.05em; }
+
+    /* MANIFESTO */
+    .manifesto {
+      background: linear-gradient(135deg, rgba(0,146,70,0.08), rgba(206,43,55,0.08));
+      border: 1px solid var(--bordo); border-radius: 12px;
+      padding: 2.5rem; text-align: center; margin: 3rem 0;
+      position: relative; overflow: hidden;
+    }
+    .manifesto::before {
+      content: '🇮🇹'; position: absolute; font-size: 8rem;
+      top: -1rem; right: -1rem; opacity: 0.04;
+    }
+    .manifesto blockquote {
+      font-family: 'Oswald', sans-serif; font-size: clamp(1.2rem,2.5vw,1.6rem);
+      font-weight: 300; line-height: 1.5; color: var(--testo);
+      font-style: italic; position: relative; z-index: 1;
+    }
+    .manifesto cite {
+      display: block; margin-top: 1rem;
+      font-family: 'Oswald', sans-serif; font-size: 0.78rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--oro); font-style: normal;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="tricolore"><span></span><span></span><span></span></div>
+    <div class="nav-logo-text">Brescia Italia Roleplay<span>Roblox RP Server</span></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="fazioni.html">Fazioni</a></li>
+    <li><a href="lavori.html">Lavori</a></li>
+    <li><a href="regolamento.html">Regolamento</a></li>
+    <li><a href="storia.html">Storia</a></li>
+    <li><a href="store.html">Store</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <p class="section-label">Le Origini</p>
+  <h1>La Nostra <em>Storia</em></h1>
+  <div class="divider"></div>
+  <p>Come è nato Brescia Italia Roleplay, da dove viene e dove sta andando. La storia di una community costruita con passione.</p>
+</div>
+
+<div class="storia-body">
+
+  <!-- MANIFESTO -->
+  <div class="manifesto">
+    <blockquote>
+      "Volevamo creare non solo un server Roblox, ma un pezzo d'Italia — quella vera, fatta di istituzioni, strade, gente e storie."
+    </blockquote>
+    <cite>— Il Team Fondatore di BIR</cite>
+  </div>
+
+  <!-- TIMELINE -->
+  <p class="section-label" style="margin-bottom:1.5rem">La Cronologia</p>
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">🌱 Primavera 2022 — Le Origini</div>
+      <div class="tl-card">
+        <h3>L'Idea Nasce</h3>
+        <p>Un piccolo gruppo di appassionati di roleplay italiano su Roblox si ritrova su Discord con un sogno: creare il server RP italiano più autentico mai realizzato. La città di Brescia viene scelta come ambientazione per il suo carattere tipicamente lombardo e la sua ricchezza istituzionale.</p>
+        <span class="tl-tag">🎮 Roblox Studio</span>
+        <span class="tl-tag">💡 Concept Design</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">🔨 Estate 2022 — Lo Sviluppo</div>
+      <div class="tl-card">
+        <h3>Costruzione della Mappa</h3>
+        <p>I builder del team iniziano la costruzione della mappa di Brescia su Roblox Studio: Piazza della Loggia, Corso Zanardelli, il Duomo, la Questura, l'Ospedale Civile e le strade principali prendono forma. Parallelamente vengono definite le prime fazioni istituzionali.</p>
+        <span class="tl-tag">🗺️ Building</span>
+        <span class="tl-tag">🏗️ Architettura</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">⚙️ Autunno 2022 — Lo Scripting</div>
+      <div class="tl-card">
+        <h3>I Sistemi di Gioco</h3>
+        <p>Gli sviluppatori Lua del team implementano i sistemi fondamentali: economia, inventario, sistema di arresti, veicoli con targa italiana, radio fazione e il sistema di lavori civili. Ogni dettaglio viene curato per massimizzare il realismo.</p>
+        <span class="tl-tag">💻 Lua Scripting</span>
+        <span class="tl-tag">⚡ Game Systems</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">🚀 Gennaio 2023 — Il Lancio</div>
+      <div class="tl-card">
+        <h3>Apertura al Pubblico — Beta</h3>
+        <p>Brescia Italia Roleplay apre le porte in versione Beta. I primi 200 giocatori entrano nel server. Il feedback è entusiasmante: la community italiana su Roblox accoglie il progetto con calore incredibile. In 48 ore il Discord supera le 500 iscrizioni.</p>
+        <span class="tl-tag">🎉 Launch</span>
+        <span class="tl-tag">👥 500+ Utenti</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">📈 Primavera 2023 — La Crescita</div>
+      <div class="tl-card">
+        <h3>Espansione della Community</h3>
+        <p>Il server cresce rapidamente. Vengono aggiunte le fazioni Guardia di Finanza, ACI Global e ANAS. Nascono i primi eventi istituzionali: processi simulati, operazioni di polizia coordinate e interventi dei VVF a scala cittadina. La community raggiunge i 2.000 membri.</p>
+        <span class="tl-tag">📊 2000+ Membri</span>
+        <span class="tl-tag">🏛️ Nuove Fazioni</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">🔄 Estate 2023 — Il Rework</div>
+      <div class="tl-card">
+        <h3>Grande Aggiornamento</h3>
+        <p>Sulla base del feedback della community, il team lancia un grande rework della mappa e dei sistemi. Nuovi quartieri, zone industriali della periferia bresciana, autostrada A4 e svincoli vengono aggiunti. Il sistema economico viene completamente rivisto.</p>
+        <span class="tl-tag">🗺️ Mappa Espansa</span>
+        <span class="tl-tag">💰 Economia 2.0</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">⚖️ Autunno 2023 — La Giustizia</div>
+      <div class="tl-card">
+        <h3>Il Sistema Giudiziario</h3>
+        <p>Viene inaugurato il Palazzo di Giustizia virtuale di Brescia. Avvocati, PM e Giudici possono ora condurre veri processi RP. Il primo processo simulato del server dura 3 ore e coinvolge 40 giocatori — un evento storico per BIR.</p>
+        <span class="tl-tag">⚖️ Giustizia</span>
+        <span class="tl-tag">📜 Primo Processo</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">🌟 2024 — Oggi</div>
+      <div class="tl-card">
+        <h3>Il Presente e il Futuro</h3>
+        <p>Brescia Italia Roleplay è oggi uno dei server RP italiani più apprezzati di Roblox. Con 11 fazioni operative, oltre 20 lavori civili e una community attiva e appassionata, continuiamo a costruire l'Italia che vogliamo vivere. Il prossimo obiettivo: espandere la mappa fino al Lago di Garda.</p>
+        <span class="tl-tag">🏆 Traguardo</span>
+        <span class="tl-tag">🔮 Futuro</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TEAM -->
+  <div style="margin-top:4rem">
+    <p class="section-label">Le Persone</p>
+    <h2 class="section-title">Il Team Fondatore</h2>
+    <div class="divider" style="margin:1rem 0 0"></div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">👑</div>
+        <div class="team-name">Fondatore</div>
+        <div class="team-role">Owner & Lead Developer</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">🔨</div>
+        <div class="team-name">Builder</div>
+        <div class="team-role">Head of Building</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">💻</div>
+        <div class="team-name">Developer</div>
+        <div class="team-role">Lead Scripter</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">🛡️</div>
+        <div class="team-name">Moderatore</div>
+        <div class="team-role">Head of Staff</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">🎨</div>
+        <div class="team-name">Designer</div>
+        <div class="team-role">GFX & UI Designer</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">📢</div>
+        <div class="team-name">Community</div>
+        <div class="team-role">Community Manager</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:4rem">
+    <p style="color:var(--testo-soft); margin-bottom:1.5rem">Vuoi far parte della storia di BIR? Entra nella community!</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="https://discord.gg/INVITE_CODE" target="_blank" class="btn btn-oro">Unisciti su Discord</a>
+      <a href="https://www.roblox.com/games/GAME_ID" target="_blank" class="btn btn-verde">Gioca su Roblox</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="tricolore-bar"></div>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo" style="margin-bottom:0.75rem">
+        <div class="tricolore"><span></span><span></span><span></span></div>
+        <div class="nav-logo-text">Brescia Italia Roleplay<span>Roblox RP Server</span></div>
+      </div>
+      <p>Il server Roblox di roleplay più realistico ambientato nella città di Brescia.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navigazione</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fazioni.html">Fazioni</a></li>
+        <li><a href="lavori.html">Lavori</a></li>
+        <li><a href="regolamento.html">Regolamento</a></li>
+        <li><a href="storia.html">Storia del Server</a></li>
+        <li><a href="store.html">Store</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Community</h4>
+      <p>🔗 <a href="https://discord.gg/INVITE_CODE" target="_blank">Discord ufficiale</a><br>
+      🎮 <a href="https://www.roblox.com/games/GAME_ID" target="_blank">Pagina Roblox</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Brescia Italia Roleplay.</span>
+    <span>Fan project — non affiliato con Roblox Corporation</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

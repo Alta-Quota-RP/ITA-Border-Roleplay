@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Store — Brescia Italia Roleplay</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .store-header-note {
+      max-width: 700px; margin: 0 auto 3rem;
+      background: rgba(212,175,55,0.07);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 10px; padding: 1.25rem 1.5rem;
+      text-align: center; font-size: 0.88rem;
+      color: #fde68a; line-height: 1.6;
+    }
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px; margin: 0 auto 5rem;
+    }
+    .plan-card {
+      background: var(--blu-card);
+      border: 1px solid var(--bordo);
+      border-radius: 14px;
+      padding: 2rem;
+      display: flex; flex-direction: column;
+      position: relative; overflow: hidden;
+      transition: all 0.3s;
+    }
+    .plan-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    .plan-card.featured {
+      border-color: var(--oro);
+      box-shadow: 0 0 40px rgba(212,175,55,0.15);
+      animation: pulse-glow 3s ease-in-out infinite;
+    }
+    .plan-badge {
+      position: absolute; top: 1rem; right: 1rem;
+      font-family: 'Oswald', sans-serif; font-size: 0.65rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      padding: 0.25rem 0.75rem; border-radius: 50px;
+      background: var(--oro); color: var(--blu-scuro); font-weight: 700;
+    }
+    .plan-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .plan-name {
+      font-family: 'Oswald', sans-serif; font-size: 1.4rem;
+      font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+      color: var(--bianco); margin-bottom: 0.25rem;
+    }
+    .plan-tagline { font-size: 0.82rem; color: var(--testo-soft); margin-bottom: 1.5rem; }
+    .plan-price {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--bordo);
+    }
+    .plan-price .amount {
+      font-family: 'Oswald', sans-serif; font-size: 2.5rem; font-weight: 700;
+      color: var(--bianco); line-height: 1;
+    }
+    .plan-price .currency { font-size: 1.2rem; vertical-align: top; margin-top: 0.5rem; display: inline-block; }
+    .plan-price .period { font-size: 0.82rem; color: var(--testo-soft); margin-left: 0.25rem; }
+    .plan-price .robux { font-size: 0.78rem; color: var(--testo-soft); margin-top: 0.25rem; }
+    .plan-features { list-style: none; flex: 1; }
+    .plan-features li {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      font-size: 0.87rem; color: var(--testo-soft);
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      line-height: 1.4;
+    }
+    .plan-features li:last-child { border-bottom: none; }
+    .plan-features .check { color: var(--verde); flex-shrink: 0; }
+    .plan-features .cross { color: rgba(255,255,255,0.2); flex-shrink: 0; }
+    .plan-cta { margin-top: 1.75rem; width: 100%; text-align: center; }
+    .plan-cta .btn { width: 100%; justify-content: center; }
+
+    /* ITEMS SECTION */
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem; max-width: 1100px; margin: 0 auto 5rem;
+    }
+    .item-card {
+      background: var(--blu-card);
+      border: 1px solid var(--bordo);
+      border-radius: 10px; padding: 1.25rem;
+      text-align: center; transition: all 0.25s;
+    }
+    .item-card:hover { border-color: var(--oro); transform: translateY(-3px); }
+    .item-emoji { font-size: 2.5rem; margin-bottom: 0.75rem; display: block; }
+    .item-name {
+      font-family: 'Oswald', sans-serif; font-size: 0.95rem;
+      font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+      color: var(--bianco); margin-bottom: 0.3rem;
+    }
+    .item-desc { font-size: 0.78rem; color: var(--testo-soft); line-height: 1.5; margin-bottom: 0.75rem; }
+    .item-price {
+      font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600;
+      color: var(--oro);
+    }
+
+    .payment-methods {
+      max-width: 700px; margin: 0 auto 5rem; text-align: center;
+    }
+    .payment-methods h3 {
+      font-family: 'Oswald', sans-serif; font-size: 1.1rem;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--bianco); margin-bottom: 1rem;
+    }
+    .pay-icons { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .pay-icon {
+      background: var(--blu-card); border: 1px solid var(--bordo);
+      border-radius: 8px; padding: 0.6rem 1.2rem;
+      font-size: 0.82rem; font-family: 'Oswald', sans-serif;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--testo-soft);
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="tricolore"><span></span><span></span><span></span></div>
+    <div class="nav-logo-text">Brescia Italia Roleplay<span>Roblox RP Server</span></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="fazioni.html">Fazioni</a></li>
+    <li><a href="lavori.html">Lavori</a></li>
+    <li><a href="regolamento.html">Regolamento</a></li>
+    <li><a href="storia.html">Storia</a></li>
+    <li><a href="store.html">Store</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <p class="section-label">Supporta il Progetto</p>
+  <h1>Lo <em>Store</em></h1>
+  <div class="divider"></div>
+  <p>Supporta lo sviluppo del server e ottieni vantaggi estetici e accessi esclusivi. Nessun pay-to-win, solo cosmetics.</p>
+</div>
+
+<div class="container">
+  <div class="store-header-note">
+    ⚠️ Tutti i contenuti dello store sono <strong>puramente estetici o di accesso prioritario</strong>. Nessun acquisto garantisce vantaggi nell'RP o nella progressione di fazione. Il nostro server è e rimarrà fair per tutti.
+  </div>
+</div>
+
+<!-- PIANI VIP -->
+<div class="container" style="text-align:center; margin-bottom:2rem">
+  <p class="section-label">Abbonamenti</p>
+  <h2 class="section-title">Piani VIP</h2>
+  <div class="divider"></div>
+</div>
+
+<div class="plans-grid" style="padding:0 2rem">
+
+  <div class="plan-card">
+    <div class="plan-icon">🥈</div>
+    <div class="plan-name">Cittadino VIP</div>
+    <div class="plan-tagline">Per chi vuole supportare il progetto</div>
+    <div class="plan-price">
+      <span class="currency">R$</span><span class="amount">199</span>
+      <span class="period">/ mese</span>
+      <div class="robux">Pagamento tramite Robux</div>
+    </div>
+    <ul class="plan-features">
+      <li><span class="check">✓</span> Tag [VIP] in chat</li>
+      <li><span class="check">✓</span> Accesso canali Discord esclusivi</li>
+      <li><span class="check">✓</span> Skin veicolo personalizzata</li>
+      <li><span class="check">✓</span> Emoji Discord dedicata</li>
+      <li><span class="cross">✗</span> Accesso prioritario al server</li>
+      <li><span class="cross">✗</span> Ruolo fazione accelerato</li>
+      <li><span class="cross">✗</span> Badge esclusivo profilo</li>
+    </ul>
+    <div class="plan-cta">
+      <a href="https://www.roblox.com/games/GAME_ID" target="_blank" class="btn btn-outline">Acquista ora</a>
+    </div>
+  </div>
+
+  <div class="plan-card featured">
+    <div class="plan-badge">🔥 Più Scelto</div>
+    <div class="plan-icon">🥇</div>
+    <div class="plan-name">Elite BIR</div>
+    <div class="plan-tagline">Il piano più completo per i veri fan</div>
+    <div class="plan-price">
+      <span class="currency">R$</span><span class="amount">499</span>
+      <span class="period">/ mese</span>
+      <div class="robux">Pagamento tramite Robux</div>
+    </div>
+    <ul class="plan-features">
+      <li><span class="check">✓</span> Tag [ELITE] in chat (dorato)</li>
+      <li><span class="check">✓</span> Tutti i benefici Cittadino VIP</li>
+      <li><span class="check">✓</span> Accesso prioritario al server</li>
+      <li><span class="check">✓</span> Badge esclusivo sul profilo</li>
+      <li><span class="check">✓</span> Nome colorato in chat</li>
+      <li><span class="check">✓</span> Targa personalizzata veicolo</li>
+      <li><span class="check">✓</span> Anteprima aggiornamenti</li>
+    </ul>
+    <div class="plan-cta">
+      <a href="https://www.roblox.com/games/GAME_ID" target="_blank" class="btn btn-oro">Acquista ora</a>
+    </div>
+  </div>
+
+  <div class="plan-card">
+    <div class="plan-icon">💎</div>
+    <div class="plan-name">Fondatore</div>
+    <div class="plan-tagline">Per i sostenitori storici del progetto</div>
+    <div class="plan-price">
+      <span class="currency">R$</span><span class="amount">999</span>
+      <span class="period">una tantum</span>
+      <div class="robux">Acquisto permanente</div>
+    </div>
+    <ul class="plan-features">
+      <li><span class="check">✓</span> Tutti i benefici Elite</li>
+      <li><span class="check">✓</span> Tag [FONDATORE] permanente</li>
+      <li><span class="check">✓</span> Accesso a canale staff esclusivo</li>
+      <li><span class="check">✓</span> Targa veicolo FONDATORE</li>
+      <li><span class="check">✓</span> Il tuo nome nei credits del server</li>
+      <li><span class="check">✓</span> Priority support ticket</li>
+      <li><span class="check">✓</span> Accesso a eventi beta</li>
+    </ul>
+    <div class="plan-cta">
+      <a href="https://discord.gg/INVITE_CODE" target="_blank" class="btn btn-verde">Contattaci</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ITEMS -->
+<div class="container" style="text-align:center; margin-bottom:2rem">
+  <p class="section-label">Acquisti Singoli</p>
+  <h2 class="section-title">Items & Cosmetics</h2>
+  <div class="divider"></div>
+</div>
+
+<div class="items-grid" style="padding:0 2rem">
+  <div class="item-card">
+    <span class="item-emoji">🚗</span>
+    <div class="item-name">Skin Veicolo</div>
+    <div class="item-desc">Livrea personalizzata per il tuo veicolo preferito</div>
+    <div class="item-price">R$ 99</div>
+  </div>
+  <div class="item-card">
+    <span class="item-emoji">👔</span>
+    <div class="item-name">Outfit Esclusivo</div>
+    <div class="item-desc">Set di abbigliamento in edizione limitata BIR</div>
+    <div class="item-price">R$ 149</div>
+  </div>
+  <div class="item-card">
+    <span class="item-emoji">🏠</span>
+    <div class="item-name">Appartamento</div>
+    <div class="item-desc">Sblocca un appartamento personalizzabile in città</div>
+    <div class="item-price">R$ 299</div>
+  </div>
+  <div class="item-card">
+    <span class="item-emoji">🎨</span>
+    <div class="item-name">Targa Custom</div>
+    <div class="item-desc">Targa personalizzata con il tuo nome o nickname</div>
+    <div class="item-price">R$ 79</div>
+  </div>
+  <div class="item-card">
+    <span class="item-emoji">📻</span>
+    <div class="item-name">Radio Privata</div>
+    <div class="item-desc">Canale radio privato per il tuo gruppo di amici</div>
+    <div class="item-price">R$ 59</div>
+  </div>
+  <div class="item-card">
+    <span class="item-emoji">🎭</span>
+    <div class="item-name">Emote Pack</div>
+    <div class="item-desc">10 emote esclusive utilizzabili durante il roleplay</div>
+    <div class="item-price">R$ 129</div>
+  </div>
+</div>
+
+<!-- PAYMENT -->
+<div class="payment-methods">
+  <h3>Metodi di Pagamento</h3>
+  <div class="pay-icons">
+    <div class="pay-icon">💎 Robux</div>
+    <div class="pay-icon">💳 GamePass Roblox</div>
+    <div class="pay-icon">🎁 Gift Card Roblox</div>
+  </div>
+  <p style="margin-top:1.25rem; font-size:0.82rem; color:var(--testo-soft)">Per assistenza acquisti, apri un ticket nel canale <strong style="color:var(--oro)">#supporto-store</strong> su Discord.</p>
+</div>
+
+<footer>
+  <div class="tricolore-bar"></div>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo" style="margin-bottom:0.75rem">
+        <div class="tricolore"><span></span><span></span><span></span></div>
+        <div class="nav-logo-text">Brescia Italia Roleplay<span>Roblox RP Server</span></div>
+      </div>
+      <p>Il server Roblox di roleplay più realistico ambientato nella città di Brescia.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navigazione</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fazioni.html">Fazioni</a></li>
+        <li><a href="lavori.html">Lavori</a></li>
+        <li><a href="regolamento.html">Regolamento</a></li>
+        <li><a href="storia.html">Storia del Server</a></li>
+        <li><a href="store.html">Store</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Community</h4>
+      <p>🔗 <a href="https://discord.gg/INVITE_CODE" target="_blank">Discord ufficiale</a><br>
+      🎮 <a href="https://www.roblox.com/games/GAME_ID" target="_blank">Pagina Roblox</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Brescia Italia Roleplay.</span>
+    <span>Fan project — non affiliato con Roblox Corporation</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

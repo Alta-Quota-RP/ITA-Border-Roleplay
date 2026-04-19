@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lavori — Brescia Italia Roleplay</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .lavori-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+      padding-bottom: 6rem;
+    }
+    .lavoro-card {
+      background: var(--blu-card);
+      border: 1px solid var(--bordo);
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: all 0.25s;
+      display: flex; flex-direction: column; gap: 0.75rem;
+    }
+    .lavoro-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+      border-color: rgba(212,175,55,0.5);
+    }
+    .lavoro-top {
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .lavoro-icon {
+      font-size: 2rem; flex-shrink: 0;
+      width: 52px; height: 52px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .lavoro-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      color: var(--bianco);
+    }
+    .lavoro-cat {
+      font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--testo-soft); margin-top: 0.1rem;
+    }
+    .lavoro-desc {
+      font-size: 0.85rem;
+      color: var(--testo-soft);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .lavoro-pay {
+      display: flex; align-items: center; gap: 0.4rem;
+      font-family: 'Oswald', sans-serif; font-size: 0.78rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--verde);
+      padding-top: 0.5rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .categoria-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--oro); margin: 3rem 0 1.25rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .categoria-label::after { content: ''; flex: 1; height: 1px; background: var(--bordo); }
+    .intro-box {
+      background: linear-gradient(135deg, rgba(0,146,70,0.07), rgba(212,175,55,0.07));
+      border: 1px solid var(--bordo);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1rem;
+      display: flex; gap: 1.5rem; align-items: center;
+      flex-wrap: wrap;
+    }
+    .intro-box .big-num {
+      font-family: 'Oswald', sans-serif; font-size: 3.5rem; font-weight: 700;
+      color: var(--oro); line-height: 1; flex-shrink: 0;
+    }
+    .intro-box h3 { font-family: 'Oswald', sans-serif; font-size: 1.2rem; text-transform: uppercase; color: var(--bianco); margin-bottom: 0.5rem; }
+    .intro-box p { font-size: 0.9rem; color: var(--testo-soft); line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="tricolore"><span></span><span></span><span></span></div>
+    <div class="nav-logo-text">Brescia Italia Roleplay<span>Roblox RP Server</span></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="fazioni.html">Fazioni</a></li>
+    <li><a href="lavori.html">Lavori</a></li>
+    <li><a href="regolamento.html">Regolamento</a></li>
+    <li><a href="storia.html">Storia</a></li>
+    <li><a href="store.html">Store</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <p class="section-label">Economia Civile</p>
+  <h1>I <em>Lavori</em></h1>
+  <div class="divider"></div>
+  <p>Non vuoi entrare in una fazione? Costruisci la tua carriera civile. Oltre 20 lavori disponibili per tutti i gusti.</p>
+</div>
+
+<div class="container">
+
+  <div class="intro-box">
+    <div class="big-num">20+</div>
+    <div>
+      <h3>Lavori Civili Disponibili</h3>
+      <p>Dal corriere Amazon al Soccorso Alpino, passando per l'avvocato e il benzinaio. Ogni lavoro ha meccaniche uniche, guadagni e possibilità di carriera. Scegli il tuo stile di vita bresciano.</p>
+    </div>
+  </div>
+
+  <!-- PROFESSIONISTI -->
+  <div class="categoria-label">👔 Professionisti</div>
+  <div class="lavori-grid">
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">🏔️</div>
+        <div><div class="lavoro-name">Soccorso Alpino</div><div class="lavoro-cat">Emergenza — Montagna</div></div>
+      </div>
+      <p class="lavoro-desc">Opera sulle zone montane nei dintorni di Brescia. Interviene per recuperi in quota, dispersi e incidenti in montagna con elicottero e squadre a piedi.</p>
+      <div class="lavoro-pay">💰 Paga Alta — Missioni speciali</div>
+    </div>
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">⚖️</div>
+        <div><div class="lavoro-name">Giudice / Magistrato</div><div class="lavoro-cat">Giustizia — Tribunale</div></div>
+      </div>
+      <p class="lavoro-desc">Lavoro freelance nell'ambito giudiziario. Presiede udienze, emette sentenze e collabora con l'Autorità Giudiziaria nei processi del server.</p>
+      <div class="lavoro-pay">💰 Paga Alta — Per esperti</div>
+    </div>
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">📋</div>
+        <div><div class="lavoro-name">Avvocato</div><div class="lavoro-cat">Diritto — Foro di Brescia</div></div>
+      </div>
+      <p class="lavoro-desc">Difende i clienti in tribunale, redige atti legali e fornisce consulenza legale. Può lavorare sia per civili che per imputati in processi penali.</p>
+      <div class="lavoro-pay">💰 Paga Media-Alta — Percentuale cause</div>
+    </div>
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">📺</div>
+        <div><div class="lavoro-name">Mediaset</div><div class="lavoro-cat">Media — Giornalismo</div></div>
+      </div>
+      <p class="lavoro-desc">Giornalisti, cameramen e conduttori coprono gli eventi della città. Interviste, cronaca nera, eventi istituzionali: l'informazione bresciana passa da qui.</p>
+      <div class="lavoro-pay">💰 Paga Media — Bonus scoop</div>
+    </div>
+
+  </div>
+
+  <!-- SERVIZI STRADALI -->
+  <div class="categoria-label">⛽ Benzinai e Trasporti</div>
+  <div class="lavori-grid">
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">🔴</div>
+        <div><div class="lavoro-name">Benzinaio Esso</div><div class="lavoro-cat">Rifornimento — Esso</div></div>
+      </div>
+      <p class="lavoro-desc">Rifornisce i veicoli dei giocatori presso il distributore Esso. Gestisce pagamenti, controllo olio e pneumatici. Attività semplice ma fondamentale.</p>
+      <div class="lavoro-pay">💰 Paga Base — Facile accesso</div>
+    </div>
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">🟢</div>
+        <div><div class="lavoro-name">Benzinaio ENI</div><div class="lavoro-cat">Rifornimento — ENI</div></div>
+      </div>
+      <p class="lavoro-desc">Gestisce la stazione di servizio ENI: carburante, autolavaggio e shop. Possibilità di turni notturni con maggiorazione.</p>
+      <div class="lavoro-pay">💰 Paga Base+ — Turni notturni</div>
+    </div>
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">🐚</div>
+        <div><div class="lavoro-name">Benzinaio Shell</div><div class="lavoro-cat">Rifornimento — Shell</div></div>
+      </div>
+      <p class="lavoro-desc">Distributore Shell con servizio completo. Rifornimento, lavaggio auto e punto vendita. Ottimo punto di partenza per la vita lavorativa nel server.</p>
+      <div class="lavoro-pay">💰 Paga Base+ — Servizio completo</div>
+    </div>
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">🚌</div>
+        <div><div class="lavoro-name">Dipendente Trasporti Pubblici</div><div class="lavoro-cat">Mobilità — ATB Brescia</div></div>
+      </div>
+      <p class="lavoro-desc">Conduce autobus sulle linee urbane di Brescia. Rispetta gli orari, gestisce i passeggeri e mantiene la linea. Fondamentale per la mobilità cittadina.</p>
+      <div class="lavoro-pay">💰 Paga Media — Stabilità garantita</div>
+    </div>
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">📦</div>
+        <div><div class="lavoro-name">Corriere Amazon</div><div class="lavoro-cat">Logistica — Consegne</div></div>
+      </div>
+      <p class="lavoro-desc">Consegna pacchi ai cittadini di Brescia con il furgone Amazon. Più consegne completi, più guadagni. Perfetto per chi ama guidare per la città.</p>
+      <div class="lavoro-pay">💰 Paga a Consegna — Guadagni illimitati</div>
+    </div>
+
+  </div>
+
+  <!-- COMMERCIO -->
+  <div class="categoria-label">🛒 Commercio e Ristorazione</div>
+  <div class="lavori-grid">
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">👗</div>
+        <div><div class="lavoro-name">Dipendente Zara</div><div class="lavoro-cat">Abbigliamento — Retail</div></div>
+      </div>
+      <p class="lavoro-desc">Lavora nel negozio Zara del centro di Brescia. Assiste i clienti nella scelta degli abiti, gestisce il magazzino e presidia la cassa.</p>
+      <div class="lavoro-pay">💰 Paga Base — Bonus vendite</div>
+    </div>
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">🍔</div>
+        <div><div class="lavoro-name">Dipendente Burger King</div><div class="lavoro-cat">Ristorazione — Fast Food</div></div>
+      </div>
+      <p class="lavoro-desc">Prepara panini, patatine e bevande al Burger King cittadino. Gestisce le ordinazioni e mantiene l'area pulita. Turni flessibili, ottimo per i neofiti.</p>
+      <div class="lavoro-pay">💰 Paga Base — Turni flessibili</div>
+    </div>
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">☕</div>
+        <div><div class="lavoro-name">Dipendente Bar</div><div class="lavoro-cat">Ristorazione — Bar Locale</div></div>
+      </div>
+      <p class="lavoro-desc">Serve caffè, aperitivi e cicchetti al banco. Il bar è il cuore pulsante della vita italiana. Gestisci gli ordini, prepara cocktail e intrattieni i clienti.</p>
+      <div class="lavoro-pay">💰 Paga Base+ — Mance incluse</div>
+    </div>
+
+  </div>
+
+  <!-- SPECIALIZZATI -->
+  <div class="categoria-label">🔧 Lavori Specializzati</div>
+  <div class="lavori-grid" style="padding-bottom:6rem">
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">🚗</div>
+        <div><div class="lavoro-name">Dipendente Concessionario</div><div class="lavoro-cat">Automotive — Vendita</div></div>
+      </div>
+      <p class="lavoro-desc">Vende automobili ai cittadini del server. Presenta i modelli, gestisce i finanziamenti e completa le pratiche di immatricolazione con l'ACI.</p>
+      <div class="lavoro-pay">💰 Paga + Provvigione — Alta variabilità</div>
+    </div>
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">🔫</div>
+        <div><div class="lavoro-name">Dipendente Armeria</div><div class="lavoro-cat">Armamento — Licenze</div></div>
+      </div>
+      <p class="lavoro-desc">Gestisce la vendita legale di armi e munizioni dietro presentazione di porto d'armi. Collabora con Polizia e Carabinieri per le verifiche sui licenziatari.</p>
+      <div class="lavoro-pay">💰 Paga Alta — Lavoro delicato</div>
+    </div>
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">🏠</div>
+        <div><div class="lavoro-name">Dipendente Tecnocasa</div><div class="lavoro-cat">Immobiliare — Agenzie</div></div>
+      </div>
+      <p class="lavoro-desc">Agente immobiliare che aiuta i giocatori ad acquistare o affittare immobili nella città di Brescia. Gestisce contratti e visite agli appartamenti disponibili.</p>
+      <div class="lavoro-pay">💰 Paga Media+ — Provvigioni vendite</div>
+    </div>
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">💊</div>
+        <div><div class="lavoro-name">Dipendente Sanitaria</div><div class="lavoro-cat">Farmacia — Salute</div></div>
+      </div>
+      <p class="lavoro-desc">Lavora in farmacia o parafarmacia. Vende medicinali, dispositivi medici e prodotti sanitari. Collabora con l'Ospedale Civile per le prescrizioni.</p>
+      <div class="lavoro-pay">💰 Paga Media — Lavoro stabile</div>
+    </div>
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">🏦</div>
+        <div><div class="lavoro-name">Dipendente Banca</div><div class="lavoro-cat">Finanza — Credito</div></div>
+      </div>
+      <p class="lavoro-desc">Gestisce conti correnti, prestiti e operazioni finanziarie per i cittadini. Collabora con la Guardia di Finanza nella prevenzione del riciclaggio.</p>
+      <div class="lavoro-pay">💰 Paga Alta — Responsabilità elevata</div>
+    </div>
+
+    <div class="lavoro-card">
+      <div class="lavoro-top">
+        <div class="lavoro-icon">🌾</div>
+        <div><div class="lavoro-name">Contadino</div><div class="lavoro-cat">Agricoltura — Campagna</div></div>
+      </div>
+      <p class="lavoro-desc">Coltiva i campi nelle zone rurali fuori Brescia. Produce frutta, verdura e cereali da vendere al mercato cittadino o consegnare ai ristoranti.</p>
+      <div class="lavoro-pay">💰 Paga Variabile — Stagionale</div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <div class="tricolore-bar"></div>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo" style="margin-bottom:0.75rem">
+        <div class="tricolore"><span></span><span></span><span></span></div>
+        <div class="nav-logo-text">Brescia Italia Roleplay<span>Roblox RP Server</span></div>
+      </div>
+      <p>Il server Roblox di roleplay più realistico ambientato nella città di Brescia.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navigazione</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fazioni.html">Fazioni</a></li>
+        <li><a href="lavori.html">Lavori</a></li>
+        <li><a href="regolamento.html">Regolamento</a></li>
+        <li><a href="storia.html">Storia del Server</a></li>
+        <li><a href="store.html">Store</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Community</h4>
+      <p>🔗 <a href="https://discord.gg/INVITE_CODE" target="_blank">Discord ufficiale</a><br>
+      🎮 <a href="https://www.roblox.com/games/GAME_ID" target="_blank">Pagina Roblox</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Brescia Italia Roleplay.</span>
+    <span>Fan project — non affiliato con Roblox Corporation</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
