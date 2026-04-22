@@ -1,611 +1,391 @@
+<!-- ============================================
+     HOME PAGE — index.html
+     ============================================ -->
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grafika Studio — Design & Visual Identity</title>
-  <meta name="description" content="Studio di grafica professionale: loghi, brand identity, social media, stampa e web design." />
+  <title>Grafika Studio — Design che Lascia il Segno</title>
+  <meta name="description" content="Studio di design grafico professionale. Loghi, brand identity, illustrazioni e molto altro." />
   <link rel="stylesheet" href="style.css" />
-  <!-- Favicon placeholder -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>✦</text></svg>" />
+  <link rel="stylesheet" href="home.css" />
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════════════════════
-     CUSTOM CURSOR
-══════════════════════════════════════════════════════════ -->
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- ══════════════════════════════════════════════════════════
-     TOAST NOTIFICATION
-══════════════════════════════════════════════════════════ -->
-<div class="toast" id="toast"></div>
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">Grafika<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="servizi.html">Servizi</a></li>
+      <li><a href="chi-sono.html">Chi Sono</a></li>
+      <li><a href="contatti.html" class="nav-cta">Contattami</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-<!-- ══════════════════════════════════════════════════════════
-     NAVIGATION
-══════════════════════════════════════════════════════════ -->
-<nav id="main-nav">
-  <a href="#home" class="nav-logo" data-page="page-home">Lollo Arts<span>.</span></a>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="servizi.html">Servizi</a>
+    <a href="chi-sono.html">Chi Sono</a>
+    <a href="contatti.html">Contattami</a>
+  </div>
 
-  <ul class="nav-links">
-    <li><a href="#home"     data-page="page-home"     class="active">Home</a></li>
-    <li><a href="#services" data-page="page-services">Servizi</a></li>
-    <li><a href="#about"    data-page="page-about">Chi Sono</a></li>
-    <li><a href="#contact"  data-page="page-contact"  class="nav-cta">Contattami</a></li>
-  </ul>
-
-  <button class="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<!-- Mobile menu -->
-<div class="mobile-menu" id="mobile-menu">
-  <button class="mobile-close" id="mobile-close">✕</button>
-  <a href="#home"     data-page="page-home">Home</a>
-  <a href="#services" data-page="page-services">Servizi</a>
-  <a href="#about"    data-page="page-about">Chi Sono</a>
-  <a href="#contact"  data-page="page-contact">Contattami</a>
-</div>
-
-
-<!-- ██████████████████████████████████████████████████████████
-     PAGE: HOME
-██████████████████████████████████████████████████████████ -->
-<section class="page active" id="page-home">
-
-  <!-- Hero -->
-  <div class="hero">
+  <!-- HERO -->
+  <section class="hero">
     <div class="hero-bg">
-      <div class="hero-orb hero-orb-1"></div>
-      <div class="hero-orb hero-orb-2"></div>
-      <div class="hero-orb hero-orb-3"></div>
-      <div class="hero-grid"></div>
+      <div class="hero-orb orb1"></div>
+      <div class="hero-orb orb2"></div>
+      <div class="hero-orb orb3"></div>
+      <canvas id="heroCanvas"></canvas>
     </div>
-
     <div class="hero-content">
-      <div class="hero-eyebrow">
-        <div class="hero-eyebrow-dot"></div>
-        Designer &amp; Grafico Pubblicitario
+      <div class="hero-label">
+        <span class="dot"></span>
+        Available for new projects
       </div>
       <h1 class="hero-title">
-        Trasformo idee<br>
-        <span class="line2">in grafica.</span>
+        Design che<br>
+        <em>lascia il</em><br>
+        <span class="hero-outline">segno.</span>
       </h1>
-      <p class="hero-desc">
-        Professionista creativo specializzato in grafica pubblicitaria, progettazione di loghi, materiali visivi e design digitale. Ogni progetto è pensato per raccontare una storia unica, costruita su misura per esprimere al meglio l'identità e i valori di chi rappresenta.
+      <p class="hero-sub">
+        Trasformo idee in identità visive potenti. Grafica, brand identity e illustrazioni per chi vuole distinguersi davvero.
       </p>
       <div class="hero-actions">
-        <button class="btn btn-primary" data-page="page-services">
-          Scopri i Servizi <span class="btn-icon">→</span>
-        </button>
-        <button class="btn btn-outline" data-page="page-contact">
-          Inizia un Progetto
-        </button>
+        <a href="servizi.html" class="btn btn-primary">
+          Esplora i Servizi
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="chi-sono.html" class="btn btn-outline">Il mio lavoro</a>
       </div>
-    </div>
-
-    <div class="hero-scroll">
-      <div class="hero-scroll-line"></div>
-      Scorri
-    </div>
-  </div>
-
-  <!-- Stats -->
-  <div class="stats-bar">
-    <div class="stat-item">
-      <div class="stat-number" data-target="4" data-suffix="+">0+</div>
-      <div class="stat-label">Clienti Soddisfatti</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number" data-target="6" data-suffix="+">0+</div>
-      <div class="stat-label">Progetti Realizzati</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number" data-target="5" data-suffix="">0</div>
-      <div class="stat-label">Anni di Esperienza</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number" data-target="75" data-suffix="%">0%</div>
-      <div class="stat-label">Tasso di Soddisfazione</div>
-    </div>
-  </div>
-
-  <!-- Process Section -->
-  <div class="section process-section">
-    <div class="section-tag">Come Lavoro</div>
-    <h2 class="section-title">Il Mio <em>Processo</em></h2>
-    <p class="section-subtitle">Un approccio strutturato per garantire risultati di qualità, rispettando tempi e aspettative.</p>
-
-    <div class="process-steps">
-      <div class="process-step reveal">
-        <div class="step-number">01</div>
-        <div class="step-icon">💬</div>
-        <div class="step-title">Brief</div>
-        <p class="step-desc">Ascolto le tue esigenze, definisco obiettivi e raccogliere tutte le informazioni necessarie per il progetto.</p>
-      </div>
-      <div class="process-step reveal">
-        <div class="step-number">02</div>
-        <div class="step-icon">🎯</div>
-        <div class="step-title">Concept</div>
-        <p class="step-desc">Sviluppo idee creative e direzioni visive da presentarti, per trovare insieme la strada giusta.</p>
-      </div>
-      <div class="process-step reveal">
-        <div class="step-number">03</div>
-        <div class="step-icon">✏️</div>
-        <div class="step-title">Design</div>
-        <p class="step-desc">Realizzo il progetto nei minimi dettagli, con revisioni incluse fino alla tua piena soddisfazione.</p>
-      </div>
-      <div class="process-step reveal">
-        <div class="step-number">04</div>
-        <div class="step-icon">🚀</div>
-        <div class="step-title">Consegna</div>
-        <p class="step-desc">Fornisco tutti i file in ogni formato necessario, pronti per la stampa o l'uso digitale.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA Banner -->
-  <div class="cta-banner reveal">
-    <div class="section-tag" style="justify-content:center">Inizia Ora</div>
-    <h2 class="section-title">Hai un progetto <em>in mente?</em></h2>
-    <p>Parliamo del tuo prossimo progetto grafico e trasformiamo la tua visione in realtà.</p>
-    <button class="btn btn-primary" data-page="page-contact">
-      Contattami Ora <span class="btn-icon">→</span>
-    </button>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-logo">Grafika<span>.</span></div>
-    <ul class="footer-links">
-      <li><a href="#home"     data-page="page-home">Home</a></li>
-      <li><a href="#services" data-page="page-services">Servizi</a></li>
-      <li><a href="#about"    data-page="page-about">Chi Sono</a></li>
-      <li><a href="#contact"  data-page="page-contact">Contatti</a></li>
-    </ul>
-    <p class="footer-copy">© 2025 Grafika Studio. Tutti i diritti riservati.</p>
-  </footer>
-
-</section>
-
-
-<!-- ██████████████████████████████████████████████████████████
-     PAGE: SERVIZI
-██████████████████████████████████████████████████████████ -->
-<section class="page" id="page-services">
-
-  <div class="services-hero">
-    <div class="section-tag" style="justify-content:center">Cosa Offro</div>
-    <h1 class="section-title">Servizi <em>Grafici</em></h1>
-    <p class="section-subtitle" style="margin:0 auto">
-      Dall'identità visiva al singolo elemento grafico: soluzioni creative su misura per ogni esigenza.
-    </p>
-  </div>
-
-  <div class="service-cards">
-
-    <div class="service-card reveal" style="--card-color: #e8c97e">
-      <span class="service-icon">🎨</span>
-      <h3 class="service-name">Brand Identity</h3>
-      <p class="service-desc">Costruisco un'identità visiva coerente e memorabile, che rappresenti i valori del tuo brand in ogni punto di contatto.</p>
-      <ul class="service-list">
-        <li>Logo in tutti i formati</li>
-        <li>Palette colori &amp; tipografia</li>
-        <li>Brand guidelines completo</li>
-        <li>Papeleria &amp; cancelleria</li>
-        <li>Mockup professionali</li>
-      </ul>
-      <div class="service-price">
-        <span class="service-price-from">da</span>
-        <span class="service-price-amount">€ 450</span>
-      </div>
-      <button class="btn btn-primary" data-page="page-contact">Richiedi Info →</button>
-    </div>
-
-    <div class="service-card reveal" style="--card-color: #c47aff">
-      <span class="service-icon">⬡</span>
-      <h3 class="service-name">Logo Design</h3>
-      <p class="service-desc">Un logo unico e scalabile che comunica la tua identità con impatto, semplicità e riconoscibilità immediata.</p>
-      <ul class="service-list">
-        <li>3 proposte iniziali</li>
-        <li>2 round di revisioni</li>
-        <li>File vettoriali (AI, SVG, EPS)</li>
-        <li>Versioni colore &amp; B/N</li>
-        <li>Licenza commerciale completa</li>
-      </ul>
-      <div class="service-price">
-        <span class="service-price-from">da</span>
-        <span class="service-price-amount">€ 180</span>
-      </div>
-      <button class="btn btn-primary" data-page="page-contact">Richiedi Info →</button>
-    </div>
-
-    <div class="service-card reveal" style="--card-color: #78e8d0">
-      <span class="service-icon">📱</span>
-      <h3 class="service-name">Social Media Design</h3>
-      <p class="service-desc">Template grafici coerenti per Instagram, Facebook, LinkedIn e TikTok che aumentano engagement e riconoscibilità.</p>
-      <ul class="service-list">
-        <li>Template feed &amp; stories</li>
-        <li>Copertine &amp; highlight icons</li>
-        <li>Grafiche per annunci (ads)</li>
-        <li>Pack da 10 post</li>
-        <li>File editabili Canva / Figma</li>
-      </ul>
-      <div class="service-price">
-        <span class="service-price-from">da</span>
-        <span class="service-price-amount">€ 120</span>
-        <span class="service-price-unit">/ pack</span>
-      </div>
-      <button class="btn btn-primary" data-page="page-contact">Richiedi Info →</button>
-    </div>
-
-    <div class="service-card reveal" style="--card-color: #ff8a65">
-      <span class="service-icon">📄</span>
-      <h3 class="service-name">Materiali a Stampa</h3>
-      <p class="service-desc">Biglietti da visita, flyer, brochure, manifesti e tutto ciò che serve per una presenza fisica curata e professionale.</p>
-      <ul class="service-list">
-        <li>Biglietti da visita</li>
-        <li>Flyer &amp; volantini</li>
-        <li>Brochure &amp; cataloghi</li>
-        <li>Manifesti &amp; poster</li>
-        <li>Packaging &amp; etichette</li>
-      </ul>
-      <div class="service-price">
-        <span class="service-price-from">da</span>
-        <span class="service-price-amount">€ 80</span>
-      </div>
-      <button class="btn btn-primary" data-page="page-contact">Richiedi Info →</button>
-    </div>
-
-    <div class="service-card reveal" style="--card-color: #4fc3f7">
-      <span class="service-icon">🖥️</span>
-      <h3 class="service-name">UI / Web Design</h3>
-      <p class="service-desc">Progettazione di interfacce web moderne, user-friendly e visivamente impeccabili. Wireframe, mockup e prototipi interattivi.</p>
-      <ul class="service-list">
-        <li>Wireframe &amp; architettura</li>
-        <li>UI Design in Figma</li>
-        <li>Prototipo interattivo</li>
-        <li>Design system</li>
-        <li>Handoff per sviluppatori</li>
-      </ul>
-      <div class="service-price">
-        <span class="service-price-from">da</span>
-        <span class="service-price-amount">€ 350</span>
-      </div>
-      <button class="btn btn-primary" data-page="page-contact">Richiedi Info →</button>
-    </div>
-
-    <div class="service-card reveal" style="--card-color: #aed581">
-      <span class="service-icon">✦</span>
-      <h3 class="service-name">Illustrazione Digitale</h3>
-      <p class="service-desc">Illustrazioni personalizzate per editorial, packaging, merchandise o qualsiasi necessità creativa del tuo progetto.</p>
-      <ul class="service-list">
-        <li>Illustrazioni vettoriali</li>
-        <li>Character design</li>
-        <li>Pattern &amp; texture</li>
-        <li>Icone personalizzate</li>
-        <li>Stile adattato al brand</li>
-      </ul>
-      <div class="service-price">
-        <span class="service-price-from">da</span>
-        <span class="service-price-amount">€ 150</span>
-      </div>
-      <button class="btn btn-primary" data-page="page-contact">Richiedi Info →</button>
-    </div>
-
-  </div>
-
-  <!-- CTA Banner -->
-  <div class="cta-banner reveal" style="margin-bottom:5rem">
-    <div class="section-tag" style="justify-content:center">Preventivo Gratuito</div>
-    <h2 class="section-title">Non trovi quello <em>che cerchi?</em></h2>
-    <p>Ogni progetto è unico. Contattami per un preventivo personalizzato senza impegno.</p>
-    <button class="btn btn-primary" data-page="page-contact">
-      Parliamone <span class="btn-icon">→</span>
-    </button>
-  </div>
-
-  <footer>
-    <div class="footer-logo">Grafika<span>.</span></div>
-    <ul class="footer-links">
-      <li><a href="#home"     data-page="page-home">Home</a></li>
-      <li><a href="#services" data-page="page-services">Servizi</a></li>
-      <li><a href="#about"    data-page="page-about">Chi Sono</a></li>
-      <li><a href="#contact"  data-page="page-contact">Contatti</a></li>
-    </ul>
-    <p class="footer-copy">© 2025 Grafika Studio.</p>
-  </footer>
-
-</section>
-
-
-<!-- ██████████████████████████████████████████████████████████
-     PAGE: CHI SONO
-██████████████████████████████████████████████████████████ -->
-<section class="page" id="page-about">
-
-  <div class="about-hero">
-    <!-- Image column -->
-    <div class="about-img-wrap reveal">
-      <div class="about-img-frame">
-        🎨
-        <div class="about-img-deco"></div>
-      </div>
-      <div class="about-badge">
-        <div class="about-badge-num">8+</div>
-        <div class="about-badge-text">Anni di<br>Esperienza</div>
-      </div>
-    </div>
-
-    <!-- Text column -->
-    <div class="about-text reveal">
-      <div class="section-tag">Chi Sono</div>
-      <h1 class="section-title">Ciao, sono<br><em>Alex Romano</em></h1>
-
-      <p class="about-bio">
-        Sono un graphic designer freelance con sede a Milano, specializzato in brand identity e comunicazione visiva. Lavoro con startup, PMI e professionisti per trasformare idee in esperienze visive memorabili.
-      </p>
-      <p class="about-bio">
-        La mia filosofia di design si basa su tre pilastri: <strong style="color:var(--text)">semplicità</strong>, <strong style="color:var(--text)">coerenza</strong> e <strong style="color:var(--text)">impatto</strong>. Ogni pixel ha uno scopo, ogni scelta cromatica racconta qualcosa.
-      </p>
-
-      <div class="skills-grid">
-        <div class="skill-item">
-          <div class="skill-name">Brand Identity <span>95%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="120">0</span>
+          <span class="stat-label">Progetti completati</span>
         </div>
-        <div class="skill-item">
-          <div class="skill-name">Logo Design <span>92%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="47">0</span>
+          <span class="stat-label">Clienti soddisfatti</span>
         </div>
-        <div class="skill-item">
-          <div class="skill-name">UI / Web Design <span>85%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name">Illustrazione <span>78%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name">Social Media Design <span>90%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name">Stampa &amp; Packaging <span>88%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="6">0</span>
+          <span class="stat-label">Anni di esperienza</span>
         </div>
       </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-stack">
+        <div class="hcard hcard1">
+          <div class="hcard-inner">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="30" stroke="#e8c547" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <polygon points="40,15 62,52 18,52" fill="none" stroke="#e8c547" stroke-width="1.5"/>
+              <circle cx="40" cy="40" r="8" fill="#e8c547" opacity="0.3"/>
+            </svg>
+            <span>Brand Identity</span>
+          </div>
+        </div>
+        <div class="hcard hcard2">
+          <div class="hcard-inner hcard-inner2">
+            <div class="color-swatch-row">
+              <div class="sw" style="background:#e8c547"></div>
+              <div class="sw" style="background:#ff6b35"></div>
+              <div class="sw" style="background:#7c4dff"></div>
+              <div class="sw" style="background:#00e5a0"></div>
+            </div>
+            <span>Color Palette</span>
+          </div>
+        </div>
+        <div class="hcard hcard3">
+          <div class="hcard-inner hcard-inner3">
+            <div class="typo-preview">Aa</div>
+            <span>Typography</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#works" class="scroll-hint">
+      <div class="scroll-icon">
+        <div class="scroll-dot"></div>
+      </div>
+      <span>Scorri</span>
+    </a>
+  </section>
 
-      <button class="btn btn-primary" data-page="page-contact">
-        Lavoriamo Insieme <span class="btn-icon">→</span>
-      </button>
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Brand Identity</span><span class="sep">✦</span>
+      <span>Logo Design</span><span class="sep">✦</span>
+      <span>Illustrazione</span><span class="sep">✦</span>
+      <span>Motion Graphics</span><span class="sep">✦</span>
+      <span>Packaging</span><span class="sep">✦</span>
+      <span>Social Media</span><span class="sep">✦</span>
+      <span>Brand Identity</span><span class="sep">✦</span>
+      <span>Logo Design</span><span class="sep">✦</span>
+      <span>Illustrazione</span><span class="sep">✦</span>
+      <span>Motion Graphics</span><span class="sep">✦</span>
+      <span>Packaging</span><span class="sep">✦</span>
+      <span>Social Media</span><span class="sep">✦</span>
     </div>
   </div>
 
-  <!-- Tools -->
-  <div class="about-tools">
-    <div class="section-tag">Strumenti</div>
-    <h2 class="section-title">Software <em>&amp; Tools</em></h2>
-    <div class="tools-grid">
-      <div class="tool-chip"><span class="tool-chip-icon">🖊️</span> Adobe Illustrator</div>
-      <div class="tool-chip"><span class="tool-chip-icon">📷</span> Adobe Photoshop</div>
-      <div class="tool-chip"><span class="tool-chip-icon">📰</span> Adobe InDesign</div>
-      <div class="tool-chip"><span class="tool-chip-icon">🎬</span> Adobe After Effects</div>
-      <div class="tool-chip"><span class="tool-chip-icon">🔷</span> Figma</div>
-      <div class="tool-chip"><span class="tool-chip-icon">🖌️</span> Procreate</div>
-      <div class="tool-chip"><span class="tool-chip-icon">⬛</span> Canva Pro</div>
-      <div class="tool-chip"><span class="tool-chip-icon">🌊</span> Affinity Suite</div>
-      <div class="tool-chip"><span class="tool-chip-icon">📐</span> Sketch</div>
-      <div class="tool-chip"><span class="tool-chip-icon">🎨</span> Blender (3D)</div>
+  <!-- PORTFOLIO PREVIEW -->
+  <section class="section" id="works">
+    <div class="reveal">
+      <p class="section-label">Portfolio</p>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:48px;">
+        <h2 class="section-title">Progetti <em>recenti</em></h2>
+        <a href="servizi.html" class="btn btn-ghost">
+          Tutti i lavori <span class="arrow">→</span>
+        </a>
+      </div>
     </div>
-  </div>
+    <div class="portfolio-grid reveal">
+      <div class="pitem pitem-large" data-category="Brand Identity">
+        <div class="pitem-img" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+          <div class="pitem-art art1">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#e8c547"/>
+                  <stop offset="100%" stop-color="#ff6b35"/>
+                </linearGradient>
+              </defs>
+              <circle cx="100" cy="100" r="60" fill="none" stroke="url(#g1)" stroke-width="2"/>
+              <circle cx="100" cy="100" r="40" fill="none" stroke="url(#g1)" stroke-width="1" opacity="0.5"/>
+              <polygon points="100,50 140,120 60,120" fill="none" stroke="#e8c547" stroke-width="1.5"/>
+              <circle cx="100" cy="100" r="10" fill="#e8c547" opacity="0.8"/>
+            </svg>
+          </div>
+        </div>
+        <div class="pitem-info">
+          <span class="tag accent">Brand Identity</span>
+          <h3>Aurelia Cosmetics</h3>
+          <p>Identità visiva completa per brand beauty di lusso</p>
+          <a href="servizi.html" class="btn btn-ghost">Vedi progetto <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div class="pitem" data-category="Logo Design">
+        <div class="pitem-img" style="background: linear-gradient(135deg, #0d2137 0%, #1b4f72 100%);">
+          <div class="pitem-art art2">
+            <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+              <rect x="30" y="30" width="100" height="100" rx="20" fill="none" stroke="#7c4dff" stroke-width="2"/>
+              <rect x="50" y="50" width="60" height="60" rx="10" fill="rgba(124,77,255,0.2)"/>
+              <text x="80" y="92" text-anchor="middle" fill="#7c4dff" font-size="28" font-weight="bold" font-family="serif">G</text>
+            </svg>
+          </div>
+        </div>
+        <div class="pitem-info">
+          <span class="tag purple">Logo Design</span>
+          <h3>Grova Architecture</h3>
+          <p>Monogramma per studio architettura</p>
+        </div>
+      </div>
+      <div class="pitem" data-category="Illustrazione">
+        <div class="pitem-img" style="background: linear-gradient(135deg, #1c0a00 0%, #5c1a00 100%);">
+          <div class="pitem-art art3">
+            <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="80" cy="80" r="50" fill="none" stroke="#ff6b35" stroke-width="1.5" stroke-dasharray="6 3"/>
+              <circle cx="80" cy="80" r="30" fill="rgba(255,107,53,0.15)"/>
+              <line x1="40" y1="80" x2="120" y2="80" stroke="#ff6b35" stroke-width="1"/>
+              <line x1="80" y1="40" x2="80" y2="120" stroke="#ff6b35" stroke-width="1"/>
+              <circle cx="80" cy="80" r="6" fill="#ff6b35"/>
+            </svg>
+          </div>
+        </div>
+        <div class="pitem-info">
+          <span class="tag orange">Illustrazione</span>
+          <h3>Cosmo Series</h3>
+          <p>Serie di illustrazioni editoriali</p>
+        </div>
+      </div>
+      <div class="pitem pitem-wide" data-category="Packaging">
+        <div class="pitem-img" style="background: linear-gradient(135deg, #0a1628 0%, #1e3a5f 50%, #0a1628 100%);">
+          <div class="pitem-art art4">
+            <svg viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+              <rect x="60" y="20" width="80" height="120" rx="4" fill="none" stroke="#e8c547" stroke-width="1.5"/>
+              <rect x="160" y="30" width="80" height="100" rx="4" fill="none" stroke="#e8c547" stroke-width="1" opacity="0.5"/>
+              <rect x="240" y="40" width="40" height="80" rx="4" fill="none" stroke="#e8c547" stroke-width="0.5" opacity="0.25"/>
+              <text x="100" y="90" text-anchor="middle" fill="#e8c547" font-size="11" font-family="serif" font-weight="bold">AURUM</text>
+              <line x1="70" y1="70" x2="130" y2="70" stroke="#e8c547" stroke-width="0.5"/>
+            </svg>
+          </div>
+        </div>
+        <div class="pitem-info">
+          <span class="tag accent">Packaging</span>
+          <h3>Aurum Spirits</h3>
+          <p>Design packaging premium per distilleria artigianale</p>
+          <a href="servizi.html" class="btn btn-ghost">Vedi progetto <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Testimonials mini-section -->
-  <div class="section" style="background:var(--bg)">
-    <div class="section-tag">Clienti</div>
-    <h2 class="section-title">Cosa Dicono <em>di Me</em></h2>
+  <!-- SERVICES TEASER -->
+  <section style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="section">
+      <div class="grid-2 reveal">
+        <div>
+          <p class="section-label">Cosa faccio</p>
+          <h2 class="section-title">Dal concept alla<br><em>realtà visiva</em></h2>
+          <p class="section-sub" style="margin-bottom:32px;">
+            Ogni progetto è unico. Lavoro fianco a fianco con clienti e brand per creare esperienze visive che comunicano, emozionano e convertono.
+          </p>
+          <a href="servizi.html" class="btn btn-primary">Scopri i servizi</a>
+        </div>
+        <div class="services-list">
+          <div class="svc-item">
+            <div class="svc-num">01</div>
+            <div>
+              <h4>Brand Identity</h4>
+              <p>Logo, palette, typografia, brand guidelines complete.</p>
+            </div>
+          </div>
+          <div class="svc-item">
+            <div class="svc-num">02</div>
+            <div>
+              <h4>Logo Design</h4>
+              <p>Marchi memorabili che comunicano l'essenza del brand.</p>
+            </div>
+          </div>
+          <div class="svc-item">
+            <div class="svc-num">03</div>
+            <div>
+              <h4>Illustrazione</h4>
+              <p>Illustrazioni editoriali, digitali e personalizzate.</p>
+            </div>
+          </div>
+          <div class="svc-item">
+            <div class="svc-num">04</div>
+            <div>
+              <h4>Social Media Kit</h4>
+              <p>Template e grafiche per una presenza digitale coerente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem">
-
-      <div class="service-card reveal" style="--card-color:var(--accent)">
-        <p style="color:var(--muted);font-size:.95rem;line-height:1.8;margin-bottom:1.5rem">
-          "Alex ha trasformato completamente l'immagine del nostro brand. Professionale, creativo e sempre puntuale nelle consegne. Lo consiglio vivamente."
-        </p>
-        <div style="display:flex;align-items:center;gap:.75rem">
-          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#e8c97e,#c47aff);display:flex;align-items:center;justify-content:center;font-size:1.1rem">👩</div>
+  <!-- TESTIMONIALS -->
+  <section class="section">
+    <div class="reveal">
+      <p class="section-label">Recensioni</p>
+      <h2 class="section-title">Cosa dicono<br>i <em>clienti</em></h2>
+    </div>
+    <div class="testimonials-grid reveal">
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <p>"Ha trasformato completamente la nostra identità visiva. Il risultato ha superato ogni aspettativa. Professionale, veloce e con un occhio per i dettagli incredibile."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar" style="background: linear-gradient(135deg, #e8c547, #ff6b35);">M</div>
           <div>
-            <div style="font-weight:600;font-size:.9rem">Martina F.</div>
-            <div style="font-size:.78rem;color:var(--muted)">CEO, Bloom Studio</div>
+            <strong>Marco Ferretti</strong>
+            <span>CEO, Ferretti & Co.</span>
           </div>
         </div>
       </div>
-
-      <div class="service-card reveal" style="--card-color:var(--accent2)">
-        <p style="color:var(--muted);font-size:.95rem;line-height:1.8;margin-bottom:1.5rem">
-          "Il logo che ha realizzato per noi è esattamente quello che cercavamo: semplice, moderno e potente. Ha capito al volo la nostra visione."
-        </p>
-        <div style="display:flex;align-items:center;gap:.75rem">
-          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#c47aff,#78e8d0);display:flex;align-items:center;justify-content:center;font-size:1.1rem">👨</div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <p>"Il logo che ha creato per noi è diventato riconoscibile ovunque. Sa interpretare perfettamente la visione del cliente e tradurla in qualcosa di visivamente potente."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar" style="background: linear-gradient(135deg, #7c4dff, #00e5a0);">S</div>
           <div>
-            <div style="font-weight:600;font-size:.9rem">Lorenzo M.</div>
-            <div style="font-size:.78rem;color:var(--muted)">Founder, TechNova</div>
+            <strong>Sofia Benedetti</strong>
+            <span>Founder, Bloom Studio</span>
           </div>
         </div>
       </div>
-
-      <div class="service-card reveal" style="--card-color:var(--accent3)">
-        <p style="color:var(--muted);font-size:.95rem;line-height:1.8;margin-bottom:1.5rem">
-          "Collaboro con Alex da due anni per tutti i materiali social del mio brand. Ogni progetto è una sorpresa positiva. Creativo, veloce e affidabile."
-        </p>
-        <div style="display:flex;align-items:center;gap:.75rem">
-          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#78e8d0,#e8c97e);display:flex;align-items:center;justify-content:center;font-size:1.1rem">👩</div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <p>"Collaborazione fantastica. Rispetta le scadenze, è disponibile e il lavoro finale è sempre di altissima qualità. Lo consiglio a chiunque cerchi un designer serio."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar" style="background: linear-gradient(135deg, #ff6b35, #e8c547);">L</div>
           <div>
-            <div style="font-weight:600;font-size:.9rem">Sara G.</div>
-            <div style="font-size:.78rem;color:var(--muted)">Owner, Aromi Bistrot</div>
+            <strong>Luca Marini</strong>
+            <span>Dir. Marketing, Aurum</span>
           </div>
         </div>
       </div>
-
     </div>
-  </div>
+  </section>
 
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="cta-band-inner">
+      <div class="cta-band-orb"></div>
+      <h2 class="section-title" style="color:#000;">Pronto a dare vita<br>alla tua <em style="color:#1a1a1a;">visione</em>?</h2>
+      <p style="color:rgba(0,0,0,0.7);margin-bottom:36px;font-size:1.05rem;">Inizia il tuo progetto oggi. Rispondo entro 24 ore.</p>
+      <a href="contatti.html" class="btn" style="background:#000;color:var(--accent);border:2px solid #000;">
+        Parliamo del tuo progetto
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">Grafika<span>.</span></div>
-    <ul class="footer-links">
-      <li><a href="#home"     data-page="page-home">Home</a></li>
-      <li><a href="#services" data-page="page-services">Servizi</a></li>
-      <li><a href="#about"    data-page="page-about">Chi Sono</a></li>
-      <li><a href="#contact"  data-page="page-contact">Contatti</a></li>
-    </ul>
-    <p class="footer-copy">© 2025 Grafika Studio.</p>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">Grafika<span>.</span></a>
+          <p>Design grafico professionale per brand che vogliono distinguersi nel mercato.</p>
+          <div class="social-links" style="margin-top:20px;">
+            <a href="#" title="Instagram" onclick="showToast('Instagram coming soon!')">in</a>
+            <a href="#" title="Behance" onclick="showToast('Behance coming soon!')">be</a>
+            <a href="#" title="Dribbble" onclick="showToast('Dribbble coming soon!')">dr</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Pagine</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="servizi.html">Servizi</a></li>
+            <li><a href="chi-sono.html">Chi Sono</a></li>
+            <li><a href="contatti.html">Contattami</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Servizi</h4>
+          <ul>
+            <li><a href="servizi.html">Brand Identity</a></li>
+            <li><a href="servizi.html">Logo Design</a></li>
+            <li><a href="servizi.html">Illustrazione</a></li>
+            <li><a href="servizi.html">Social Media Kit</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contatti</h4>
+          <ul>
+            <li><a href="mailto:ciao@grafika.studio">ciao@grafika.studio</a></li>
+            <li><a href="tel:+393331234567">+39 333 123 4567</a></li>
+            <li><a onclick="showToast('Milano, Italia 🇮🇹')">Milano, Italia</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Grafika Studio — Tutti i diritti riservati</span>
+        <span>Made with ♥ in Milano</span>
+      </div>
+    </div>
   </footer>
 
-</section>
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
 
-
-<!-- ██████████████████████████████████████████████████████████
-     PAGE: CONTATTAMI
-██████████████████████████████████████████████████████████ -->
-<section class="page" id="page-contact">
-
-  <div class="contact-wrap">
-
-    <!-- Left: info -->
-    <div class="contact-info">
-      <div class="section-tag">Contatti</div>
-      <h1 class="section-title">Iniziamo a<br><em>Collaborare</em></h1>
-      <p class="section-subtitle" style="margin-bottom:2.5rem">
-        Hai un progetto in mente? Scrivimi e riceverai una risposta entro 24 ore lavorative con un primo preventivo.
-      </p>
-
-      <div class="contact-method reveal">
-        <div class="contact-method-icon">📧</div>
-        <div>
-          <div class="contact-method-label">Email</div>
-          <div class="contact-method-value">ciao@grafikastudio.it</div>
-        </div>
-      </div>
-
-      <div class="contact-method reveal">
-        <div class="contact-method-icon">📞</div>
-        <div>
-          <div class="contact-method-label">Telefono / WhatsApp</div>
-          <div class="contact-method-value">+39 333 456 7890</div>
-        </div>
-      </div>
-
-      <div class="contact-method reveal">
-        <div class="contact-method-icon">📍</div>
-        <div>
-          <div class="contact-method-label">Sede</div>
-          <div class="contact-method-value">Milano, Italia — Lavoro da remoto</div>
-        </div>
-      </div>
-
-      <div class="contact-method reveal">
-        <div class="contact-method-icon">🕐</div>
-        <div>
-          <div class="contact-method-label">Disponibilità</div>
-          <div class="contact-method-value">Lun – Ven, 9:00 – 18:00</div>
-        </div>
-      </div>
-
-      <div class="social-row">
-        <a class="social-btn" href="#" title="Instagram">📸</a>
-        <a class="social-btn" href="#" title="Behance">🅱</a>
-        <a class="social-btn" href="#" title="Dribbble">🏀</a>
-        <a class="social-btn" href="#" title="LinkedIn">💼</a>
-      </div>
-    </div>
-
-    <!-- Right: form -->
-    <div class="contact-form-wrap reveal">
-      <h2 class="form-title">Inviami un messaggio</h2>
-      <p class="form-subtitle">Compila il modulo e ti rispondo il prima possibile.</p>
-
-      <form id="contact-form" novalidate>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="f-name">Nome *</label>
-            <input class="form-input" id="f-name" type="text" placeholder="Mario Rossi" required />
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="f-email">Email *</label>
-            <input class="form-input" id="f-email" type="email" placeholder="mario@email.it" required />
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="f-company">Azienda / Brand</label>
-          <input class="form-input" id="f-company" type="text" placeholder="(opzionale)" />
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="f-service">Servizio di Interesse *</label>
-          <select class="form-select" id="f-service" required>
-            <option value="" disabled selected>Seleziona un servizio…</option>
-            <option value="brand">Brand Identity</option>
-            <option value="logo">Logo Design</option>
-            <option value="social">Social Media Design</option>
-            <option value="print">Materiali a Stampa</option>
-            <option value="web">UI / Web Design</option>
-            <option value="illustration">Illustrazione Digitale</option>
-            <option value="other">Altro</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Budget Indicativo</label>
-          <div class="budget-chips">
-            <button type="button" class="budget-chip">€ 100 – 300</button>
-            <button type="button" class="budget-chip">€ 300 – 600</button>
-            <button type="button" class="budget-chip">€ 600 – 1.200</button>
-            <button type="button" class="budget-chip">€ 1.200+</button>
-            <button type="button" class="budget-chip">Da definire</button>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="f-msg">Descrivi il Progetto *</label>
-          <textarea class="form-textarea" id="f-msg" placeholder="Raccontami del tuo progetto, il settore, i colori che ami, la scadenza, tutto quello che ritieni utile…" required></textarea>
-        </div>
-
-        <div id="success-msg" class="success-msg">
-          <div class="success-icon">🎉</div>
-          <strong>Messaggio ricevuto!</strong><br>
-          Ti risponderò entro 24 ore lavorative.
-        </div>
-
-        <div class="form-submit-row">
-          <button type="submit" class="btn btn-primary">
-            Invia Messaggio <span class="btn-icon">→</span>
-          </button>
-        </div>
-
-      </form>
-    </div>
-
-  </div>
-
-  <footer>
-    <div class="footer-logo">Grafika<span>.</span></div>
-    <ul class="footer-links">
-      <li><a href="#home"     data-page="page-home">Home</a></li>
-      <li><a href="#services" data-page="page-services">Servizi</a></li>
-      <li><a href="#about"    data-page="page-about">Chi Sono</a></li>
-      <li><a href="#contact"  data-page="page-contact">Contatti</a></li>
-    </ul>
-    <p class="footer-copy">© 2025 Grafika Studio.</p>
-  </footer>
-
-</section>
-
-
-<!-- ─── Scripts ────────────────────────────────────────────── -->
-<script src="main.js"></script>
-
+  <script src="main.js"></script>
+  <script src="home.js"></script>
 </body>
 </html>

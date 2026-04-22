@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servizi — Grafika Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="servizi.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">Grafika<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="servizi.html" class="active">Servizi</a></li>
+      <li><a href="chi-sono.html">Chi Sono</a></li>
+      <li><a href="contatti.html" class="nav-cta">Contattami</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="servizi.html">Servizi</a>
+    <a href="chi-sono.html">Chi Sono</a>
+    <a href="contatti.html">Contattami</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <div class="ph-orb ph-orb1"></div>
+      <div class="ph-orb ph-orb2"></div>
+    </div>
+    <div class="page-hero-content">
+      <p class="section-label">Cosa offro</p>
+      <h1 class="section-title">Servizi di <em>Design</em><br>Professionale</h1>
+      <p class="section-sub">Dalla brand identity al social media kit — ogni soluzione visiva di cui il tuo business ha bisogno.</p>
+    </div>
+  </section>
+
+  <!-- FILTER TABS -->
+  <div class="filter-wrap">
+    <div class="filter-inner">
+      <button class="filter-btn active" data-filter="all">Tutti</button>
+      <button class="filter-btn" data-filter="branding">Branding</button>
+      <button class="filter-btn" data-filter="logo">Logo</button>
+      <button class="filter-btn" data-filter="illustration">Illustrazione</button>
+      <button class="filter-btn" data-filter="digital">Digital</button>
+    </div>
+  </div>
+
+  <!-- SERVICES GRID -->
+  <section class="section">
+    <div class="services-grid" id="servicesGrid">
+
+      <article class="service-card reveal" data-cat="branding">
+        <div class="sc-header">
+          <div class="sc-icon" style="background: rgba(232,197,71,0.1); color: var(--accent);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="sc-badge">Più richiesto</div>
+        </div>
+        <h3>Brand Identity</h3>
+        <p>Un'identità visiva completa che racconta chi sei. Logo, palette colori, tipografia, pattern e brand guidelines per un'immagine coerente e memorabile.</p>
+        <ul class="sc-features">
+          <li>Logo principale + varianti</li>
+          <li>Palette colori primaria/secondaria</li>
+          <li>Selezione tipografica</li>
+          <li>Pattern e texture</li>
+          <li>Brand guidelines (PDF)</li>
+          <li>File sorgente inclusi</li>
+        </ul>
+        <div class="sc-footer">
+          <div class="sc-price">
+            <span class="price-from">A partire da</span>
+            <span class="price-num">€ 890</span>
+          </div>
+          <a href="contatti.html" class="btn btn-primary btn-sm">Richiedi</a>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-cat="logo">
+        <div class="sc-header">
+          <div class="sc-icon" style="background: rgba(124,77,255,0.1); color: #a88fff;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+        </div>
+        <h3>Logo Design</h3>
+        <p>Un marchio unico e riconoscibile che comunica l'essenza della tua azienda. Studio del concept, bozzetti e raffinamento fino al risultato perfetto.</p>
+        <ul class="sc-features">
+          <li>3 concept iniziali</li>
+          <li>2 round di revisioni</li>
+          <li>Versioni colore/B&W</li>
+          <li>File vettoriali (AI, SVG, PDF)</li>
+          <li>File raster (PNG, JPG)</li>
+        </ul>
+        <div class="sc-footer">
+          <div class="sc-price">
+            <span class="price-from">A partire da</span>
+            <span class="price-num">€ 320</span>
+          </div>
+          <a href="contatti.html" class="btn btn-primary btn-sm">Richiedi</a>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-cat="illustration">
+        <div class="sc-header">
+          <div class="sc-icon" style="background: rgba(255,107,53,0.1); color: #ff8c65;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+        </div>
+        <h3>Illustrazione</h3>
+        <p>Illustrazioni digitali originali per editoria, web, packaging o uso personale. Stile personalizzato adattato alla tua visione e al tuo pubblico.</p>
+        <ul class="sc-features">
+          <li>Illustrazioni editoriali</li>
+          <li>Character design</li>
+          <li>Scene ambientali</li>
+          <li>Stile adattabile</li>
+          <li>Alta risoluzione print-ready</li>
+        </ul>
+        <div class="sc-footer">
+          <div class="sc-price">
+            <span class="price-from">A partire da</span>
+            <span class="price-num">€ 180</span>
+          </div>
+          <a href="contatti.html" class="btn btn-primary btn-sm">Richiedi</a>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-cat="digital">
+        <div class="sc-header">
+          <div class="sc-icon" style="background: rgba(0,229,160,0.1); color: #00e5a0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+        </div>
+        <h3>Social Media Kit</h3>
+        <p>Template grafici coerenti per tutti i tuoi canali social. Post, Stories, Reels covers, highlights — tutto coordinato con la tua identità visiva.</p>
+        <ul class="sc-features">
+          <li>Template post feed (10+)</li>
+          <li>Template Stories (10+)</li>
+          <li>Covers highlight</li>
+          <li>File Canva/Figma editabili</li>
+          <li>Guida all'uso</li>
+        </ul>
+        <div class="sc-footer">
+          <div class="sc-price">
+            <span class="price-from">A partire da</span>
+            <span class="price-num">€ 240</span>
+          </div>
+          <a href="contatti.html" class="btn btn-primary btn-sm">Richiedi</a>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-cat="branding">
+        <div class="sc-header">
+          <div class="sc-icon" style="background: rgba(232,197,71,0.1); color: var(--accent);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
+        </div>
+        <h3>Packaging Design</h3>
+        <p>Design per imballaggi, etichette e packaging che si distinguono sullo scaffale. Dalla struttura alla grafica finale, pronto per la stampa.</p>
+        <ul class="sc-features">
+          <li>Studio della struttura</li>
+          <li>Grafica etichette/box</li>
+          <li>Mockup realistici</li>
+          <li>File print-ready (CMYK)</li>
+          <li>Coordinamento con stampatore</li>
+        </ul>
+        <div class="sc-footer">
+          <div class="sc-price">
+            <span class="price-from">A partire da</span>
+            <span class="price-num">€ 450</span>
+          </div>
+          <a href="contatti.html" class="btn btn-primary btn-sm">Richiedi</a>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-cat="digital">
+        <div class="sc-header">
+          <div class="sc-icon" style="background: rgba(124,77,255,0.1); color: #a88fff;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+        </div>
+        <h3>Materiale Stampato</h3>
+        <p>Biglietti da visita, brochure, flyer, manifesti e materiale promozionale professionale. Design che fa impressione sia digitale che fisico.</p>
+        <ul class="sc-features">
+          <li>Biglietti da visita</li>
+          <li>Brochure & depliant</li>
+          <li>Manifesti & banner</li>
+          <li>Menù & materiale HoReCa</li>
+          <li>File pronti per stampa</li>
+        </ul>
+        <div class="sc-footer">
+          <div class="sc-price">
+            <span class="price-from">A partire da</span>
+            <span class="price-num">€ 120</span>
+          </div>
+          <a href="contatti.html" class="btn btn-primary btn-sm">Richiedi</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section style="background: var(--surface); border-top: 1px solid var(--border);">
+    <div class="section">
+      <div class="reveal" style="text-align:center;margin-bottom:60px;">
+        <p class="section-label" style="justify-content:center;">Come lavoro</p>
+        <h2 class="section-title">Il mio processo<br>in <em>4 fasi</em></h2>
+      </div>
+      <div class="process-steps reveal">
+        <div class="process-step">
+          <div class="ps-num">01</div>
+          <div class="ps-line"></div>
+          <div class="ps-content">
+            <h4>Discovery</h4>
+            <p>Ascolto il tuo progetto, analizzo il settore e i competitor per costruire una strategia visiva mirata.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="ps-num">02</div>
+          <div class="ps-line"></div>
+          <div class="ps-content">
+            <h4>Concept</h4>
+            <p>Sviluppo 2-3 direzioni creative distinte da presentare e discutere insieme.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="ps-num">03</div>
+          <div class="ps-line"></div>
+          <div class="ps-content">
+            <h4>Sviluppo</h4>
+            <p>Raffino la direzione scelta con iterazioni continue fino al risultato perfetto.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="ps-num">04</div>
+          <div class="ps-line ps-last"></div>
+          <div class="ps-content">
+            <h4>Consegna</h4>
+            <p>Consegno tutti i file organizzati e pronti all'uso, con supporto post-consegna.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="reveal" style="text-align:center;margin-bottom:48px;">
+      <p class="section-label" style="justify-content:center;">FAQ</p>
+      <h2 class="section-title">Domande <em>frequenti</em></h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">Quanto tempo richiede un progetto di brand identity? <span class="faq-arrow">+</span></button>
+        <div class="faq-a"><p>Un progetto di brand identity completo richiede generalmente 2-4 settimane, a seconda della complessità e dei round di revisione. Per i loghi singoli i tempi si riducono a 1-2 settimane.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Posso richiedere modifiche dopo la consegna? <span class="faq-arrow">+</span></button>
+        <div class="faq-a"><p>Sì! Ogni pacchetto include un numero definito di round di revisione. Modifiche aggiuntive sono disponibili a tariffa oraria concordata preventivamente.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quali formati di file ricevo? <span class="faq-arrow">+</span></button>
+        <div class="faq-a"><p>Consegno tutti i formati necessari: file vettoriali (AI, SVG, PDF, EPS) per stampa e uso professionale, e file raster (PNG, JPG) in alta risoluzione per uso web e digitale.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Come avviene il pagamento? <span class="faq-arrow">+</span></button>
+        <div class="faq-a"><p>Richiedo un acconto del 50% all'avvio del progetto e il saldo al momento della consegna finale. Accetto bonifico bancario e PayPal.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Lavori anche con clienti fuori dall'Italia? <span class="faq-arrow">+</span></button>
+        <div class="faq-a"><p>Assolutamente! Lavoro con clienti in tutta Europa e nel resto del mondo. Le comunicazioni avvengono in italiano, inglese o francese.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">Grafika<span>.</span></a>
+          <p>Design grafico professionale per brand che vogliono distinguersi.</p>
+          <div class="social-links" style="margin-top:20px;">
+            <a href="#" onclick="showToast('Instagram coming soon!')">in</a>
+            <a href="#" onclick="showToast('Behance coming soon!')">be</a>
+            <a href="#" onclick="showToast('Dribbble coming soon!')">dr</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Pagine</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="servizi.html">Servizi</a></li>
+            <li><a href="chi-sono.html">Chi Sono</a></li>
+            <li><a href="contatti.html">Contattami</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contatti</h4>
+          <ul>
+            <li><a href="mailto:ciao@grafika.studio">ciao@grafika.studio</a></li>
+            <li><a href="tel:+393331234567">+39 333 123 4567</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Grafika Studio</span>
+        <span>Made with ♥ in Milano</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="main.js"></script>
+  <script src="servizi.js"></script>
+</body>
+</html>
