@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grafica Studio — Design che comunica</title>
+  <meta name="description" content="Studio di grafica professionale. Identità visive, loghi, branding e design digitale che trasformano le idee in esperienze memorabili." />
+
+  <!-- Google Fonts (modifica qui per cambiare i font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+
+<!-- Cursore personalizzato -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<!-- Toast notification -->
+<div class="toast" id="toast"></div>
+
+<!-- ============================================
+     NAVBAR
+     ============================================ -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo" data-page="home">
+      Grafica<span>Studio</span>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#" data-page="home">Home</a></li>
+      <li><a href="#" data-page="servizi">Servizi</a></li>
+      <li><a href="#" data-page="chi">Chi Sono</a></li>
+      <li><a href="#" data-page="contatti" class="nav-cta">Contattami</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+
+<!-- ============================================================
+     PAGINA: HOME
+     ============================================================ -->
+<div class="page" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Studio di Grafica &amp; Branding
+        </div>
+
+        <h1 class="hero-title">
+          Design che<br><em>racconta</em><br>la tua storia
+        </h1>
+
+        <p class="hero-description">
+          Trasformo idee in identità visive memorabili. Dal logo alla brand identity completa, creo grafiche che parlano al tuo pubblico e differenziano il tuo brand.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary" data-page="servizi">
+            Scopri i Servizi
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#" class="btn btn-ghost" data-page="contatti">
+            Inizia un progetto
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="120" data-suffix="+">0+</div>
+            <div class="hero-stat-label">Progetti completati</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="85" data-suffix="+">0+</div>
+            <div class="hero-stat-label">Clienti soddisfatti</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="7" data-suffix="+ anni">0</div>
+            <div class="hero-stat-label">Di esperienza</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visual decorativo -->
+    <div class="hero-visual">
+      <div class="hero-visual-frame">
+        <div class="hero-mockup-grid">
+          <div class="hero-mockup-item"></div>
+          <div class="hero-mockup-item"></div>
+          <div class="hero-mockup-item"></div>
+          <div class="hero-mockup-item"></div>
+          <div class="hero-mockup-item"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO PREVIEW -->
+  <section class="portfolio-preview">
+    <div class="container">
+      <div class="portfolio-header reveal">
+        <div>
+          <div class="section-label">Portfolio selezionato</div>
+          <h2 class="section-title">Lavori recenti</h2>
+        </div>
+        <a href="#" class="btn btn-outline" data-page="servizi">Vedi tutto</a>
+      </div>
+
+      <!-- Filtri -->
+      <div style="display:flex; gap:12px; margin-bottom:32px; flex-wrap:wrap;" class="reveal">
+        <button class="btn btn-outline active" data-filter="all" style="padding:8px 20px; font-size:0.75rem;">Tutti</button>
+        <button class="btn btn-outline" data-filter="logo" style="padding:8px 20px; font-size:0.75rem;">Logo & Brand</button>
+        <button class="btn btn-outline" data-filter="social" style="padding:8px 20px; font-size:0.75rem;">Social Media</button>
+        <button class="btn btn-outline" data-filter="print" style="padding:8px 20px; font-size:0.75rem;">Print</button>
+        <button class="btn btn-outline" data-filter="web" style="padding:8px 20px; font-size:0.75rem;">Web Design</button>
+      </div>
+
+      <div class="portfolio-grid reveal">
+        <div class="portfolio-item reveal" data-category="logo">
+          <div class="portfolio-item-inner pi-color-1">🏛️</div>
+          <div class="portfolio-overlay">
+            <h3>Identità Aurora</h3>
+            <span>Logo &amp; Brand Identity</span>
+          </div>
+        </div>
+        <div class="portfolio-item reveal reveal-delay-1" data-category="social">
+          <div class="portfolio-item-inner pi-color-2">✦</div>
+          <div class="portfolio-overlay">
+            <h3>Social Pack Luxe</h3>
+            <span>Social Media Design</span>
+          </div>
+        </div>
+        <div class="portfolio-item reveal reveal-delay-2" data-category="print">
+          <div class="portfolio-item-inner pi-color-3">◈</div>
+          <div class="portfolio-overlay">
+            <h3>Editorial Verde</h3>
+            <span>Print &amp; Packaging</span>
+          </div>
+        </div>
+        <div class="portfolio-item reveal reveal-delay-3" data-category="web">
+          <div class="portfolio-item-inner pi-color-4">⬡</div>
+          <div class="portfolio-overlay">
+            <h3>Web UI Bloom</h3>
+            <span>Web Design</span>
+          </div>
+        </div>
+        <div class="portfolio-item reveal reveal-delay-4" data-category="logo">
+          <div class="portfolio-item-inner pi-color-5">◉</div>
+          <div class="portfolio-overlay">
+            <h3>Logo Minimal</h3>
+            <span>Logo Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERCHÉ SCEGLIERMI -->
+  <section class="why-section">
+    <div class="container">
+      <div class="why-grid">
+        <div class="reveal">
+          <div class="section-label">Il mio approccio</div>
+          <h2 class="section-title">Design con uno scopo preciso</h2>
+          <p class="section-subtitle">
+            Non creo solo grafiche belle. Creo strumenti di comunicazione che lavorano per te: costruiscono fiducia, raccontano valori, convertono visitatori in clienti.
+          </p>
+          <div class="gold-divider"></div>
+          <a href="#" class="btn btn-ghost" data-page="chi">
+            Scopri il mio metodo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="why-features">
+          <div class="why-feature reveal reveal-delay-1">
+            <div class="why-feature-icon">🎯</div>
+            <div class="why-feature-content">
+              <h3>Strategia prima di tutto</h3>
+              <p>Ogni progetto inizia dall'analisi del tuo brand, del tuo pubblico e degli obiettivi concreti.</p>
+            </div>
+          </div>
+          <div class="why-feature reveal reveal-delay-2">
+            <div class="why-feature-icon">✨</div>
+            <div class="why-feature-content">
+              <h3>Design originale</h3>
+              <p>Niente template preconfezionati. Ogni grafica è unica e pensata esclusivamente per te.</p>
+            </div>
+          </div>
+          <div class="why-feature reveal reveal-delay-3">
+            <div class="why-feature-icon">⚡</div>
+            <div class="why-feature-content">
+              <h3>Consegna puntuale</h3>
+              <p>Rispetto le scadenze e ti tengo aggiornato in ogni fase del progetto, senza sorprese.</p>
+            </div>
+          </div>
+          <div class="why-feature reveal reveal-delay-4">
+            <div class="why-feature-icon">🔄</div>
+            <div class="why-feature-content">
+              <h3>Revisioni incluse</h3>
+              <p>Il tuo feedback è fondamentale. Includo sempre cicli di revisione nel processo creativo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIANZE -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-label reveal">Cosa dicono di me</div>
+      <h2 class="section-title reveal">Clienti soddisfatti</h2>
+    </div>
+
+    <div class="testimonials-track-wrapper">
+      <div class="testimonials-track">
+        <!-- Prima serie -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Ha trasformato completamente l'immagine della nostra azienda. Il nuovo logo è riconoscibile, professionale e ci rappresenta perfettamente."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div><div class="testimonial-name">Marco Bianchi</div><div class="testimonial-role">CEO, Bianchi Solutions</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Lavoro fantastico! I template per i social media hanno aumentato il nostro engagement del 40% nel primo mese. Altamente consigliato."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">S</div>
+            <div><div class="testimonial-name">Sara Conti</div><div class="testimonial-role">Marketing Manager</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Professionalità, creatività e rispetto delle scadenze. Finalmente un grafico con cui si comunica facilmente e i risultati parlano da soli."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">A</div>
+            <div><div class="testimonial-name">Andrea Romano</div><div class="testimonial-role">Fondatore, Studio Arco</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Il packaging che ha creato per i nostri prodotti ha superato ogni aspettativa. I clienti lo notano immediatamente e lo adorano."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">L</div>
+            <div><div class="testimonial-name">Lucia Ferraro</div><div class="testimonial-role">Owner, Bottega Ferraro</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Ho finalmente un brand che mi distingue dalla concorrenza. Il processo era chiaro, organizzato e il risultato è esattamente quello che sognavo."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">F</div>
+            <div><div class="testimonial-name">Federico Mori</div><div class="testimonial-role">Freelance Consultant</div></div>
+          </div>
+        </div>
+        <!-- Duplicato per loop infinito -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Ha trasformato completamente l'immagine della nostra azienda. Il nuovo logo è riconoscibile, professionale e ci rappresenta perfettamente."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div><div class="testimonial-name">Marco Bianchi</div><div class="testimonial-role">CEO, Bianchi Solutions</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Lavoro fantastico! I template per i social media hanno aumentato il nostro engagement del 40% nel primo mese. Altamente consigliato."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">S</div>
+            <div><div class="testimonial-name">Sara Conti</div><div class="testimonial-role">Marketing Manager</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Professionalità, creatività e rispetto delle scadenze. Finalmente un grafico con cui si comunica facilmente e i risultati parlano da soli."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">A</div>
+            <div><div class="testimonial-name">Andrea Romano</div><div class="testimonial-role">Fondatore, Studio Arco</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Il packaging che ha creato per i nostri prodotti ha superato ogni aspettativa. I clienti lo notano immediatamente e lo adorano."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">L</div>
+            <div><div class="testimonial-name">Lucia Ferraro</div><div class="testimonial-role">Owner, Bottega Ferraro</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Ho finalmente un brand che mi distingue dalla concorrenza. Il processo era chiaro, organizzato e il risultato è esattamente quello che sognavo."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">F</div>
+            <div><div class="testimonial-name">Federico Mori</div><div class="testimonial-role">Freelance Consultant</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-bg"></div>
+    <div class="container reveal">
+      <div class="section-label" style="justify-content:center;">Inizia adesso</div>
+      <h2 class="section-title">Pronto a dare una nuova voce al tuo brand?</h2>
+      <p class="section-subtitle">Raccontami il tuo progetto. Rispondo entro 24 ore con un preventivo gratuito e senza impegno.</p>
+      <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+        <a href="#" class="btn btn-primary" data-page="contatti">
+          Richiedi un preventivo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#" class="btn btn-outline" data-page="servizi">Esplora i servizi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="nav-logo" style="font-size:1.2rem;">Grafica<span style="color:var(--text-primary)">Studio</span></div>
+          <p>Design professionale per brand ambiziosi. Identità visive che comunicano, convincono e convertono.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigazione</h4>
+          <ul>
+            <li><a href="#" data-page="home">Home</a></li>
+            <li><a href="#" data-page="servizi">Servizi</a></li>
+            <li><a href="#" data-page="chi">Chi Sono</a></li>
+            <li><a href="#" data-page="contatti">Contattami</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contatti</h4>
+          <ul>
+            <li><a href="#" class="email-link">ciao@graficaStudio.it</a></li>
+            <li><a href="tel:+393401234567">+39 340 123 4567</a></li>
+            <li><a href="#">Milano, Italia</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 GraficaStudio. Tutti i diritti riservati.</span>
+        <div class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">Behance</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+<!-- ============================================================
+     PAGINA: SERVIZI
+     ============================================================ -->
+<div class="page" id="page-servizi">
+
+  <!-- Header -->
+  <div class="page-header">
+    <div class="container page-header-content">
+      <div class="section-label">Cosa offro</div>
+      <h1 class="page-title">Servizi di<br><em style="font-style:italic; color:var(--gold)">Design</em></h1>
+      <p class="section-subtitle">Soluzioni creative su misura per ogni esigenza. Dalla brand identity al social media design, tutto con un approccio strategico.</p>
+    </div>
+  </div>
+
+  <!-- Cards Servizi -->
+  <section class="services-section">
+    <div class="container">
+      <div class="services-grid">
+
+        <div class="service-card featured reveal">
+          <span class="service-badge">Più richiesto</span>
+          <span class="service-icon">🏆</span>
+          <h3>Brand Identity Completa</h3>
+          <p>Il pacchetto completo per costruire un'identità visiva coerente e professionale da zero.</p>
+          <ul class="service-features">
+            <li>Logo design + varianti</li>
+            <li>Palette colori & tipografia</li>
+            <li>Brand guidelines documento</li>
+            <li>Biglietti da visita</li>
+            <li>Template social base</li>
+            <li>File in tutti i formati</li>
+          </ul>
+          <div class="service-price">da €890 <span>/ progetto</span></div>
+          <div style="margin-top:24px;">
+            <a href="#" class="btn btn-primary" data-page="contatti" style="width:100%; justify-content:center;">Richiedi preventivo</a>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-1">
+          <span class="service-icon">✏️</span>
+          <h3>Logo Design</h3>
+          <p>Un logo che ti rappresenta, funziona su tutti i supporti e rimane impresso nella memoria.</p>
+          <ul class="service-features">
+            <li>3 proposte iniziali</li>
+            <li>2 cicli di revisioni</li>
+            <li>Versioni colore/bianco/nero</li>
+            <li>File vettoriali + raster</li>
+          </ul>
+          <div class="service-price">da €350 <span>/ progetto</span></div>
+          <div style="margin-top:24px;">
+            <a href="#" class="btn btn-outline" data-page="contatti" style="width:100%; justify-content:center;">Scopri di più</a>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-2">
+          <span class="service-icon">📱</span>
+          <h3>Social Media Design</h3>
+          <p>Template e grafiche per Instagram, Facebook e LinkedIn che aumentano engagement e riconoscibilità.</p>
+          <ul class="service-features">
+            <li>Pack da 10/20/30 template</li>
+            <li>Formato post + stories</li>
+            <li>File Canva editabili</li>
+            <li>Guida all'uso inclusa</li>
+          </ul>
+          <div class="service-price">da €290 <span>/ pack</span></div>
+          <div style="margin-top:24px;">
+            <a href="#" class="btn btn-outline" data-page="contatti" style="width:100%; justify-content:center;">Scopri di più</a>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-1">
+          <span class="service-icon">🖨️</span>
+          <h3>Materiali Print</h3>
+          <p>Brochure, flyer, locandine, roll-up e ogni materiale stampato per eventi e marketing.</p>
+          <ul class="service-features">
+            <li>Impaginazione professionale</li>
+            <li>Pronto per la stampa (CMYK)</li>
+            <li>Revisioni incluse</li>
+            <li>Formato PDF + originale</li>
+          </ul>
+          <div class="service-price">da €180 <span>/ pezzo</span></div>
+          <div style="margin-top:24px;">
+            <a href="#" class="btn btn-outline" data-page="contatti" style="width:100%; justify-content:center;">Scopri di più</a>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-2">
+          <span class="service-icon">📦</span>
+          <h3>Packaging Design</h3>
+          <p>Design di confezioni e packaging che catturano l'attenzione sullo scaffale e comunicano qualità.</p>
+          <ul class="service-features">
+            <li>Concept & render 3D</li>
+            <li>File tecnici per stampa</li>
+            <li>Coordinazione con stamperia</li>
+          </ul>
+          <div class="service-price">da €490 <span>/ progetto</span></div>
+          <div style="margin-top:24px;">
+            <a href="#" class="btn btn-outline" data-page="contatti" style="width:100%; justify-content:center;">Scopri di più</a>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-3">
+          <span class="service-icon">🌐</span>
+          <h3>UI / Web Design</h3>
+          <p>Mockup e design di interfacce web ed app che uniscono estetica e usabilità eccellente.</p>
+          <ul class="service-features">
+            <li>Wireframe & prototipo</li>
+            <li>Design system</li>
+            <li>File Figma consegnato</li>
+            <li>Responsive (mobile+desktop)</li>
+          </ul>
+          <div class="service-price">da €690 <span>/ progetto</span></div>
+          <div style="margin-top:24px;">
+            <a href="#" class="btn btn-outline" data-page="contatti" style="width:100%; justify-content:center;">Scopri di più</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-label reveal">Come lavoro</div>
+      <h2 class="section-title reveal">Il mio processo in 4 fasi</h2>
+
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="process-step-number">01</div>
+          <h3>Brief & Strategia</h3>
+          <p>Ascolto le tue esigenze, analizzo il tuo mercato e definiamo insieme gli obiettivi del progetto.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-1">
+          <div class="process-step-number">02</div>
+          <h3>Concept Creativo</h3>
+          <p>Sviluppo 2-3 direzioni creative differenti basate sulla strategia concordata.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+          <div class="process-step-number">03</div>
+          <h3>Sviluppo & Revisioni</h3>
+          <p>Raffiniamo la direzione scelta con cicli di feedback e revisioni incluse.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+          <div class="process-step-number">04</div>
+          <h3>Consegna Finale</h3>
+          <p>Ricevi tutti i file in ogni formato necessario, con guida all'uso inclusa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-label reveal">Domande frequenti</div>
+      <h2 class="section-title reveal">FAQ</h2>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-question">
+            Quanto tempo richiede un progetto?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              I tempi variano in base alla complessità. Un logo semplice richiede 5-7 giorni lavorativi, una brand identity completa 3-4 settimane. Per progetti urgenti esiste un servizio prioritario con consegna accelerata (con sovrapprezzo del 30%).
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Come funziona il pagamento?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Richiedo un acconto del 50% all'inizio del progetto e il saldo alla consegna finale. Accetto bonifico bancario, PayPal e carta di credito. Per progetti di importo superiore a €1.000 posso valutare piani di pagamento personalizzati.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Quante revisioni sono incluse?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Ogni pacchetto include 2-3 cicli di revisione completi. Le revisioni devono riguardare il progetto in corso e non stravolgere la direzione creativa concordata. Revisioni aggiuntive sono disponibili a €60/ora.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Quali file ricevo alla fine?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Consegno sempre: file vettoriali (AI, EPS, SVG), file raster ad alta risoluzione (PNG, JPG), versione PDF e i file editabili nel programma utilizzato (Illustrator, Figma, InDesign). Puoi portare i file da qualsiasi altro grafico senza problemi.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Lavori con clienti fuori dall'Italia?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Assolutamente sì! Lavoro con clienti in tutta Europa e nel mondo. La comunicazione avviene via email, Zoom o Meet. I pagamenti internazionali vengono gestiti via PayPal o bonifico SEPA.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-bg"></div>
+    <div class="container reveal" style="text-align:center;">
+      <div class="section-label" style="justify-content:center;">Inizia il tuo progetto</div>
+      <h2 class="section-title">Hai un progetto in mente?</h2>
+      <p class="section-subtitle" style="margin:0 auto 48px;">Contattami per un preventivo gratuito e senza impegno. Rispondo sempre entro 24 ore.</p>
+      <a href="#" class="btn btn-primary" data-page="contatti">
+        Parliamo del tuo progetto
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="nav-logo" style="font-size:1.2rem;">Grafica<span style="color:var(--text-primary)">Studio</span></div>
+          <p>Design professionale per brand ambiziosi.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigazione</h4>
+          <ul>
+            <li><a href="#" data-page="home">Home</a></li>
+            <li><a href="#" data-page="servizi">Servizi</a></li>
+            <li><a href="#" data-page="chi">Chi Sono</a></li>
+            <li><a href="#" data-page="contatti">Contattami</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contatti</h4>
+          <ul>
+            <li><a href="#" class="email-link">ciao@graficaStudio.it</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 GraficaStudio. Tutti i diritti riservati.</span>
+        <div class="social-links">
+          <a href="#">Instagram</a><a href="#">Behance</a><a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+<!-- ============================================================
+     PAGINA: CHI SONO
+     ============================================================ -->
+<div class="page" id="page-chi">
+
+  <div class="page-header">
+    <div class="container page-header-content">
+      <div class="section-label">La mia storia</div>
+      <h1 class="page-title">Chi<br><em style="font-style:italic; color:var(--gold)">Sono</em></h1>
+      <p class="section-subtitle">Graphic designer con 7+ anni di esperienza. Appassionato di brand identity, tipografia e design che fa la differenza.</p>
+    </div>
+  </div>
+
+  <!-- Intro -->
+  <section class="about-intro">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-visual reveal">
+          <div class="about-image-frame">
+            <div class="about-image-bg">🎨</div>
+          </div>
+          <div class="about-accent-box">
+            <div class="about-accent-number">120+</div>
+            <div class="about-accent-label">Progetti realizzati</div>
+          </div>
+        </div>
+
+        <div class="about-content reveal reveal-delay-2">
+          <div class="section-label">Chi sono</div>
+          <h2 class="section-title" style="font-size:2.5rem;">Lorenzo Ricci,<br>Graphic Designer</h2>
+          <p class="section-subtitle" style="max-width:100%; margin-bottom:24px;">
+            Ciao! Sono Lorenzo, un graphic designer freelance con sede a Milano. Ho iniziato il mio percorso nel mondo della grafica nel 2017, dopo una laurea in Design della Comunicazione al Politecnico di Milano.
+          </p>
+          <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.85; margin-bottom:32px;">
+            Nel tempo ho sviluppato una specializzazione in brand identity e visual design per piccole e medie imprese, aiutando decine di imprenditori a costruire un'immagine professionale che rispecchiasse davvero i loro valori.
+          </p>
+
+          <div class="gold-divider"></div>
+
+          <div class="about-skills">
+            <div>
+              <div class="skill-bar-label"><span>Brand Identity</span><span>95%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+            </div>
+            <div>
+              <div class="skill-bar-label"><span>Logo Design</span><span>92%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+            </div>
+            <div>
+              <div class="skill-bar-label"><span>Social Media Design</span><span>88%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+            </div>
+            <div>
+              <div class="skill-bar-label"><span>UI Design</span><span>80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div>
+              <div class="skill-bar-label"><span>Print & Packaging</span><span>85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+          </div>
+
+          <div style="margin-top:40px;">
+            <a href="#" class="btn btn-primary" data-page="contatti">Lavoriamo insieme</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valori -->
+  <section class="values-section">
+    <div class="container">
+      <div class="section-label reveal">La mia filosofia</div>
+      <h2 class="section-title reveal">I valori che guidano il mio lavoro</h2>
+
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <span class="value-icon">🎨</span>
+          <h3>Creatività con purpose</h3>
+          <p>Il design bello ma inutile non mi interessa. Ogni scelta creativa deve servire un obiettivo concreto e comunicare qualcosa di preciso.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-1">
+          <span class="value-icon">🤝</span>
+          <h3>Collaborazione vera</h3>
+          <p>Non sono un esecutore di ordini, sono un partner creativo. Il tuo successo è il mio successo, e ci lavoro insieme a te.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-2">
+          <span class="value-icon">📐</span>
+          <h3>Attenzione al dettaglio</h3>
+          <p>La qualità è nei dettagli: nella spaziatura tra le lettere, nel peso del colore, nell'allineamento perfetto. Non transigo su questo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strumenti -->
+  <section style="padding:var(--section-padding) 0;">
+    <div class="container">
+      <div class="section-label reveal">Strumenti e software</div>
+      <h2 class="section-title reveal">Con cosa lavoro</h2>
+
+      <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:48px;" class="reveal">
+        <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:4px; padding:20px 28px; display:flex; align-items:center; gap:12px; transition:var(--transition);" onmouseover="this.style.borderColor='var(--border-hover)'" onmouseout="this.style.borderColor='var(--border)'">
+          <span style="font-size:1.5rem;">🖥</span>
+          <div><div style="font-size:0.9rem;font-weight:500;color:var(--text-primary)">Adobe Illustrator</div><div style="font-size:0.75rem;color:var(--text-muted)">Vettoriale & logo</div></div>
+        </div>
+        <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:4px; padding:20px 28px; display:flex; align-items:center; gap:12px; transition:var(--transition);" onmouseover="this.style.borderColor='var(--border-hover)'" onmouseout="this.style.borderColor='var(--border)'">
+          <span style="font-size:1.5rem;">📸</span>
+          <div><div style="font-size:0.9rem;font-weight:500;color:var(--text-primary)">Adobe Photoshop</div><div style="font-size:0.75rem;color:var(--text-muted)">Immagini & retouching</div></div>
+        </div>
+        <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:4px; padding:20px 28px; display:flex; align-items:center; gap:12px; transition:var(--transition);" onmouseover="this.style.borderColor='var(--border-hover)'" onmouseout="this.style.borderColor='var(--border)'">
+          <span style="font-size:1.5rem;">📄</span>
+          <div><div style="font-size:0.9rem;font-weight:500;color:var(--text-primary)">Adobe InDesign</div><div style="font-size:0.75rem;color:var(--text-muted)">Print & impaginazione</div></div>
+        </div>
+        <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:4px; padding:20px 28px; display:flex; align-items:center; gap:12px; transition:var(--transition);" onmouseover="this.style.borderColor='var(--border-hover)'" onmouseout="this.style.borderColor='var(--border)'">
+          <span style="font-size:1.5rem;">🎯</span>
+          <div><div style="font-size:0.9rem;font-weight:500;color:var(--text-primary)">Figma</div><div style="font-size:0.75rem;color:var(--text-muted)">UI & prototipazione</div></div>
+        </div>
+        <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:4px; padding:20px 28px; display:flex; align-items:center; gap:12px; transition:var(--transition);" onmouseover="this.style.borderColor='var(--border-hover)'" onmouseout="this.style.borderColor='var(--border)'">
+          <span style="font-size:1.5rem;">🖌</span>
+          <div><div style="font-size:0.9rem;font-weight:500;color:var(--text-primary)">Canva Pro</div><div style="font-size:0.75rem;color:var(--text-muted)">Template editabili</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="timeline-section" style="background:var(--bg-secondary);">
+    <div class="container">
+      <div class="section-label reveal">Il mio percorso</div>
+      <h2 class="section-title reveal">La mia storia</h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">17</div>
+          <div class="timeline-content">
+            <div class="timeline-year">2017</div>
+            <h3>Laurea in Design della Comunicazione</h3>
+            <p>Laurea magistrale al Politecnico di Milano con tesi sulla brand identity per le PMI italiane.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">18</div>
+          <div class="timeline-content">
+            <div class="timeline-year">2018</div>
+            <h3>Junior Designer presso Studio Forma</h3>
+            <p>Esperienza in un'agenzia di comunicazione milanese, lavorando su progetti per brand nazionali.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">20</div>
+          <div class="timeline-content">
+            <div class="timeline-year">2020</div>
+            <h3>Lancio come Freelancer</h3>
+            <p>Inizio del percorso freelance con i primi 15 clienti e la specializzazione in brand identity.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">22</div>
+          <div class="timeline-content">
+            <div class="timeline-year">2022</div>
+            <h3>Espansione internazionale</h3>
+            <p>Primi clienti europei e collaborazioni con agenzie in Germania, Francia e Spagna.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">25</div>
+          <div class="timeline-content">
+            <div class="timeline-year">2025</div>
+            <h3>120+ Progetti completati</h3>
+            <p>Milestone raggiunti: 85+ clienti soddisfatti e un portfolio variegato che copre tutti i settori.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="nav-logo" style="font-size:1.2rem;">Grafica<span style="color:var(--text-primary)">Studio</span></div>
+          <p>Design professionale per brand ambiziosi.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigazione</h4>
+          <ul>
+            <li><a href="#" data-page="home">Home</a></li>
+            <li><a href="#" data-page="servizi">Servizi</a></li>
+            <li><a href="#" data-page="chi">Chi Sono</a></li>
+            <li><a href="#" data-page="contatti">Contattami</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contatti</h4>
+          <ul>
+            <li><a href="#" class="email-link">ciao@graficaStudio.it</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 GraficaStudio. Tutti i diritti riservati.</span>
+        <div class="social-links"><a href="#">Instagram</a><a href="#">Behance</a><a href="#">LinkedIn</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+<!-- ============================================================
+     PAGINA: CONTATTAMI
+     ============================================================ -->
+<div class="page" id="page-contatti">
+
+  <div class="page-header">
+    <div class="container page-header-content">
+      <div class="section-label">Parliamo</div>
+      <h1 class="page-title">Contatta<em style="font-style:italic; color:var(--gold)">mi</em></h1>
+      <p class="section-subtitle">Hai un progetto in mente? Raccontamelo. Rispondo entro 24 ore con una proposta su misura e senza impegno.</p>
+    </div>
+  </div>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Info -->
+        <div class="contact-info reveal">
+          <div class="section-label">Recapiti</div>
+          <h2 class="section-title" style="font-size:2rem;">Sono qui per te</h2>
+          <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.8; margin-bottom:0;">
+            Preferisci un approccio diretto? Scrivimi via email o chiamami. Rispondo sempre personalmente, senza assistenti o risponditori automatici.
+          </p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">✉️</div>
+            <div>
+              <div class="contact-detail-label">Email</div>
+              <div class="contact-detail-value"><a href="mailto:ciao@graficaStudio.it" class="email-link" style="color:var(--gold);text-decoration:none;">ciao@graficaStudio.it</a></div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <div class="contact-detail-label">Telefono</div>
+              <div class="contact-detail-value">+39 340 123 4567</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <div class="contact-detail-label">Sede</div>
+              <div class="contact-detail-value">Milano, Italia</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🕐</div>
+            <div>
+              <div class="contact-detail-label">Orari</div>
+              <div class="contact-detail-value">Lun–Ven, 9:00–18:00</div>
+            </div>
+          </div>
+
+          <div class="contact-availability">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+              <span class="availability-dot"></span>
+              <span style="font-size:0.85rem;font-weight:500;color:var(--text-primary);">Disponibile per nuovi progetti</span>
+            </div>
+            <p style="font-size:0.82rem;color:var(--text-muted);">Prossima disponibilità: immediatamente</p>
+          </div>
+
+          <div style="margin-top:32px;">
+            <div style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">Seguimi su</div>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <a href="#" class="btn btn-outline" style="padding:10px 20px;font-size:0.75rem;">Instagram</a>
+              <a href="#" class="btn btn-outline" style="padding:10px 20px;font-size:0.75rem;">Behance</a>
+              <a href="#" class="btn btn-outline" style="padding:10px 20px;font-size:0.75rem;">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-wrapper reveal reveal-delay-2">
+          <h2 class="form-title">Inviami un messaggio</h2>
+          <p class="form-subtitle">Compila il form e ti rispondo entro 24 ore lavorative.</p>
+
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nome e cognome *</label>
+                <input type="text" id="name" placeholder="Marco Rossi" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" placeholder="marco@email.it" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company">Azienda / Brand</label>
+              <input type="text" id="company" placeholder="Il tuo brand (opzionale)" />
+            </div>
+
+            <div class="form-group">
+              <label for="service">Servizio di interesse</label>
+              <select id="service">
+                <option value="" disabled selected>Seleziona un servizio...</option>
+                <option value="brand">Brand Identity Completa</option>
+                <option value="logo">Logo Design</option>
+                <option value="social">Social Media Design</option>
+                <option value="print">Materiali Print</option>
+                <option value="packaging">Packaging Design</option>
+                <option value="web">UI / Web Design</option>
+                <option value="altro">Altro / Non so ancora</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="budget">Budget indicativo</label>
+              <select id="budget">
+                <option value="" disabled selected>Seleziona un range...</option>
+                <option value="small">Meno di €300</option>
+                <option value="medium">€300 – €600</option>
+                <option value="large">€600 – €1.200</option>
+                <option value="xlarge">Oltre €1.200</option>
+                <option value="discuss">Preferirei discuterne</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Descrivi il tuo progetto *</label>
+              <textarea id="message" placeholder="Raccontami del tuo progetto: cosa fai, cosa ti serve, entro quando ne hai bisogno..." required></textarea>
+            </div>
+
+            <label class="form-checkbox">
+              <input type="checkbox" id="privacy" />
+              <span>Ho letto e accetto la <a href="#" style="color:var(--gold);">Privacy Policy</a>. I miei dati verranno utilizzati esclusivamente per rispondere alla mia richiesta.</span>
+            </label>
+
+            <button type="submit" class="btn btn-primary form-submit">
+              Invia Richiesta
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Mappa decorativa -->
+  <section class="location-section">
+    <div class="container">
+      <div class="section-label reveal">Dove sono</div>
+      <h2 class="section-title reveal">Con sede a Milano,<br>lavoro in tutta Italia e oltre</h2>
+
+      <div class="location-grid">
+        <div class="location-map-placeholder reveal">
+          <div class="map-grid-lines"></div>
+          <div class="map-pin">
+            <span class="map-pin-icon">📍</span>
+            <div class="map-pin-label">Milano, Italia</div>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <h3 style="font-family:var(--font-display);font-size:1.8rem;margin-bottom:16px;">Collaboro con clienti in tutta Europa</h3>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:32px;">
+            Essendo un professionista digitale, posso lavorare con chiunque, ovunque si trovi. Le riunioni si svolgono via Zoom o Google Meet, la comunicazione via email e i file vengono consegnati digitalmente.
+          </p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div style="padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:4px;text-align:center;">
+              <div style="font-family:var(--font-display);font-size:2rem;color:var(--gold);">🇮🇹</div>
+              <div style="font-size:0.8rem;color:var(--text-secondary);margin-top:8px;">Italia</div>
+            </div>
+            <div style="padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:4px;text-align:center;">
+              <div style="font-family:var(--font-display);font-size:2rem;color:var(--gold);">🇪🇺</div>
+              <div style="font-size:0.8rem;color:var(--text-secondary);margin-top:8px;">Europa</div>
+            </div>
+          </div>
+          <div style="margin-top:24px;">
+            <a href="mailto:ciao@graficaStudio.it" class="btn btn-ghost email-link">
+              ciao@graficaStudio.it
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="nav-logo" style="font-size:1.2rem;">Grafica<span style="color:var(--text-primary)">Studio</span></div>
+          <p>Design professionale per brand ambiziosi.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigazione</h4>
+          <ul>
+            <li><a href="#" data-page="home">Home</a></li>
+            <li><a href="#" data-page="servizi">Servizi</a></li>
+            <li><a href="#" data-page="chi">Chi Sono</a></li>
+            <li><a href="#" data-page="contatti">Contattami</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contatti</h4>
+          <ul>
+            <li><a href="#" class="email-link">ciao@graficaStudio.it</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 GraficaStudio. Tutti i diritti riservati.</span>
+        <div class="social-links"><a href="#">Instagram</a><a href="#">Behance</a><a href="#">LinkedIn</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- JavaScript -->
+<script src="main.js"></script>
+</body>
+</html>
